@@ -1,0 +1,1926 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Golden Key Builders & Developers | BMRDA Approved A Khata | Bengaluru Real Estate</title>
+    <meta name="description" content="Golden Key Builders & Developers - BMRDA Approved A Khata sites for sale in Bengaluru. Direct owner property with complete transparency.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* CSS Variables */
+        :root {
+            --bg-main: #F9FAF8;
+            --bg-alt: #FFFFFF;
+            --gold: #D4AF37;
+            --gold-soft: #EAD9A8;
+            --text-main: #1E1E1E;
+            --text-muted: #6B6B6B;
+            --border-light: #E5E5E5;
+        }
+        
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: 1.5rem;
+        }
+        
+        h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+        }
+        
+        h2 {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+        }
+        
+        h3 {
+            font-size: clamp(1.3rem, 3vw, 1.8rem);
+        }
+        
+        /* Kannada Text */
+        .kannada {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.5;
+        }
+        
+        /* Container */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        /* Sections */
+        section {
+            padding: 4rem 0;
+        }
+        
+        .section-alt {
+            background-color: var(--bg-alt);
+        }
+        
+        .section-gold {
+            background: linear-gradient(180deg, #FFFFFF 0%, #F6F4EF 100%);
+        }
+        
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: var(--bg-alt);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.8rem 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background-color: var(--gold);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+        
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-main);
+            line-height: 1.2;
+        }
+        
+        .logo-subtext {
+            font-size: 0.55rem;
+            color: var(--gold);
+            letter-spacing: 0.5px;
+            margin-top: -3px;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            font-size: 0.9rem;
+        }
+        
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-main);
+            cursor: pointer;
+        }
+        
+        /* Mobile Menu */
+        .mobile-menu {
+            position: fixed;
+            top: 70px;
+            left: 0;
+            width: 100%;
+            background-color: var(--bg-alt);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            transform: translateY(-100%);
+            opacity: 0;
+            transition: all 0.3s ease;
+            z-index: 999;
+            visibility: hidden;
+        }
+        
+        .mobile-menu.active {
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .mobile-nav-links {
+            list-style: none;
+        }
+        
+        .mobile-nav-links li {
+            margin-bottom: 1rem;
+        }
+        
+        .mobile-nav-links a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-size: 1rem;
+            font-weight: 500;
+            display: block;
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(180deg, #FFFFFF 0%, #F6F4EF 100%);
+            padding-top: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            width: 100%;
+        }
+        
+        .bmrda-badge {
+            display: inline-flex;
+            align-items: center;
+            background-color: var(--gold-soft);
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease;
+        }
+        
+        .bmrda-badge.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .bmrda-badge i {
+            color: var(--gold);
+            margin-right: 8px;
+        }
+        
+        .hero-headline {
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero-headline .line {
+            display: block;
+            overflow: hidden;
+            margin-bottom: 5px;
+        }
+        
+        .hero-headline span {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        
+        .hero-headline span.visible {
+            opacity: 1;
+            transform: translateY(0);
+            transition: all 0.8s ease;
+        }
+        
+        .kannada-highlight {
+            background-color: var(--gold-soft);
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            margin: 1.5rem 0;
+            font-size: 1.1rem;
+            border-left: 4px solid var(--gold);
+        }
+        
+        .hero-subtitle {
+            font-size: 1rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            max-width: 600px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease;
+        }
+        
+        .hero-subtitle.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Phone Numbers */
+        .phone-numbers {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .phone-item {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        
+        .phone-item i {
+            color: var(--gold);
+            font-size: 1.2rem;
+        }
+        
+        .phone-item a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        /* Word Carousel */
+        .word-carousel {
+            display: inline-block;
+            position: relative;
+            height: 1.2em;
+            overflow: hidden;
+            vertical-align: bottom;
+        }
+        
+        .word-carousel span {
+            display: block;
+            animation: text-slide 12s ease-in-out infinite;
+            opacity: 1 !important;
+            transform: none !important;
+        }
+        
+        @keyframes text-slide {
+            0%, 25% { transform: translateY(0); }
+            33%, 58% { transform: translateY(-100%); }
+            66%, 91% { transform: translateY(-200%); }
+            100% { transform: translateY(-300%); }
+        }
+        
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.8rem 1.8rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.95rem;
+        }
+        
+        .btn-primary {
+            background-color: var(--gold);
+            color: var(--text-main);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.2);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--text-main);
+            border: 2px solid var(--border-light);
+        }
+        
+        .btn-secondary:hover {
+            border-color: var(--gold);
+            transform: translateY(-3px);
+        }
+        
+        .btn-icon {
+            margin-right: 8px;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease;
+        }
+        
+        .cta-buttons.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Trust Badges */
+        .trust-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            background-color: var(--bg-alt);
+            padding: 0.8rem 1.2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease;
+        }
+        
+        .trust-badge.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .trust-badge:hover {
+            transform: translateY(-5px);
+        }
+        
+        .trust-icon {
+            width: 40px;
+            height: 40px;
+            background-color: var(--gold-soft);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+        
+        .trust-icon i {
+            color: var(--gold);
+            font-size: 1.2rem;
+        }
+        
+        /* Section Headers */
+        .section-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 1rem;
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: var(--gold);
+        }
+        
+        .section-subtitle {
+            color: var(--text-muted);
+            font-size: 1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .about-text p {
+            margin-bottom: 1rem;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+        
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--gold);
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 0.3rem;
+        }
+        
+        .md-image {
+            width: 100%;
+            height: 350px;
+            background: linear-gradient(135deg, var(--gold-soft) 0%, var(--gold) 100%);
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .md-image i {
+            font-size: 5rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+        
+        .md-image h3 {
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+        
+        .md-image p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.9rem;
+        }
+        
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .service-card {
+            background-color: var(--bg-alt);
+            border-radius: 12px;
+            padding: 2rem 1.5rem;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background-color: var(--gold-soft);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        
+        .service-icon i {
+            font-size: 1.5rem;
+            color: var(--gold);
+        }
+        
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        
+        /* Video Section */
+        .video-section {
+            background-color: var(--bg-main);
+        }
+        
+        .video-wrapper {
+            max-width: 100%;
+            margin: 0 auto;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            background-color: #000;
+        }
+        
+        .video-container {
+            position: relative;
+            width: 100%;
+            background-color: #000;
+        }
+        
+        .video-container video {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: contain;
+            max-height: 70vh;
+        }
+        
+        /* Video Popup Modal */
+        .video-popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.5s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .video-popup-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .video-popup-content {
+            width: 95%;
+            max-width: 500px;
+            background-color: #000;
+            border-radius: 12px;
+            overflow: hidden;
+            transform: scale(0.9);
+            transition: transform 0.5s ease;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        }
+        
+        .video-popup-overlay.active .video-popup-content {
+            transform: scale(1);
+        }
+        
+        .video-popup-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.8rem 1rem;
+            background-color: #111;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .video-popup-header h3 {
+            color: white;
+            margin: 0;
+            font-size: 1rem;
+        }
+        
+        .close-popup {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.3rem;
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: background-color 0.3s ease;
+        }
+        
+        .close-popup:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .popup-video-container {
+            position: relative;
+            width: 100%;
+            background-color: #000;
+        }
+        
+        .popup-video-container video {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: contain;
+            max-height: 80vh;
+        }
+        
+        /* Testimonials Slider */
+        .testimonial-slider {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .testimonial-track {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        
+        .testimonial-slide {
+            min-width: 100%;
+            padding: 0 0.5rem;
+        }
+        
+        .testimonial-content {
+            background-color: var(--bg-alt);
+            border-radius: 16px;
+            padding: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+        
+        .quote-icon {
+            font-size: 1.8rem;
+            color: var(--gold-soft);
+            margin-bottom: 1rem;
+        }
+        
+        .testimonial-text {
+            font-size: 0.95rem;
+            font-style: italic;
+            color: var(--text-muted);
+            margin-bottom: 1.2rem;
+            line-height: 1.6;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--text-main);
+        }
+        
+        .testimonial-role {
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            margin-top: 0.2rem;
+        }
+        
+        .slider-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 1.5rem;
+        }
+        
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: var(--border-light);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .dot.active {
+            background-color: var(--gold);
+        }
+        
+        /* FAQ Section */
+        .faq-container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: var(--bg-alt);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .faq-question {
+            padding: 1rem 1.2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        .faq-icon {
+            color: var(--gold);
+            transition: transform 0.3s ease;
+            font-size: 1rem;
+        }
+        
+        .faq-answer {
+            padding: 0 1.2rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+        
+        .faq-item.active .faq-answer {
+            padding: 0 1.2rem 1rem 1.2rem;
+            max-height: 500px;
+        }
+        
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+        
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        
+        .contact-info {
+            background-color: var(--bg-alt);
+            border-radius: 16px;
+            padding: 2rem 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background-color: var(--gold-soft);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+        
+        .contact-icon i {
+            color: var(--gold);
+            font-size: 1rem;
+        }
+        
+        .contact-details h4 {
+            font-size: 1rem;
+            margin-bottom: 0.3rem;
+        }
+        
+        .contact-details p {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            line-height: 1.5;
+        }
+        
+        .social-contact {
+            display: flex;
+            gap: 0.8rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .social-contact a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            background-color: var(--bg-main);
+            border-radius: 8px;
+            color: var(--text-main);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .social-contact a:hover {
+            background-color: var(--gold);
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        .map-container {
+            height: 300px;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            text-align: center;
+            background-color: var(--gold-soft);
+        }
+        
+        .cta-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .cta-content h2 {
+            margin-bottom: 1rem;
+        }
+        
+        .cta-content p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 2rem;
+        }
+        
+        .cta-buttons.center {
+            justify-content: center;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--text-main);
+            color: white;
+            padding: 3rem 0 1.5rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.1rem;
+            margin-bottom: 1.2rem;
+            color: white;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.6rem;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 0.85rem;
+        }
+        
+        .footer-links a:hover {
+            color: var(--gold);
+        }
+        
+        .footer-links i {
+            margin-right: 6px;
+            width: 16px;
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-logo .logo-icon {
+            margin-right: 8px;
+        }
+        
+        .footer-logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: white;
+        }
+        
+        .footer-logo-subtext {
+            font-size: 0.5rem;
+            color: var(--gold);
+            letter-spacing: 0.5px;
+            margin-top: -3px;
+        }
+        
+        .footer-bottom {
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.75rem;
+        }
+        
+        /* WhatsApp Float Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 1.2rem;
+            right: 1.2rem;
+            width: 55px;
+            height: 55px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+            z-index: 999;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .whatsapp-float:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+        }
+        
+        /* Animation Classes */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+        
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 992px) {
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .about-stats {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .nav-links {
+                gap: 1rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .desktop-nav {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            section {
+                padding: 3rem 0;
+            }
+            
+            .hero {
+                padding-top: 90px;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .btn {
+                width: 100%;
+            }
+            
+            .about-stats {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .trust-badges {
+                flex-direction: column;
+            }
+            
+            .trust-badge {
+                width: 100%;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .footer-logo {
+                justify-content: center;
+            }
+            
+            .social-contact {
+                justify-content: center;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .map-container {
+                height: 250px;
+            }
+            
+            .phone-numbers {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+            
+            .video-popup-content {
+                width: 95%;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .logo-text {
+                font-size: 0.95rem;
+            }
+            
+            .logo-subtext {
+                font-size: 0.45rem;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 0.9rem;
+            }
+            
+            .kannada-highlight {
+                font-size: 0.95rem;
+                padding: 0.8rem 1rem;
+            }
+            
+            .service-card {
+                padding: 1.5rem;
+            }
+            
+            .testimonial-content {
+                padding: 1.2rem;
+            }
+            
+            .faq-question {
+                padding: 1rem;
+                font-size: 0.85rem;
+            }
+            
+            .contact-info {
+                padding: 1.5rem 1rem;
+            }
+            
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Video Popup Modal -->
+    <div class="video-popup-overlay" id="videoPopup">
+        <div class="video-popup-content">
+            <div class="video-popup-header">
+                <h3>Golden Key Builders & Developers</h3>
+                <button class="close-popup" id="closePopup">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="popup-video-container">
+                <video id="popupVideo" controls autoplay muted loop playsinline>
+                    <source src="ad1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="#home" class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-key" style="color: white;"></i>
+                    </div>
+                    <div>
+                        <div class="logo-text">GOLDEN KEY</div>
+                        <div class="logo-subtext">BUILDERS & DEVELOPERS</div>
+                    </div>
+                </a>
+                
+                <nav class="desktop-nav">
+                    <ul class="nav-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#video">Our Vision</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <ul class="mobile-nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#video">Our Vision</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="tel:+919448330323" class="btn btn-primary" style="margin-top: 0.5rem; width: 100%;">Call Now</a></li>
+            </ul>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="bmrda-badge" id="bmrdaBadge">
+                    <i class="fas fa-check-circle"></i>
+                    BMRDA APPROVED A KHATA
+                </div>
+                
+                <h1 class="hero-headline">
+                    <div class="line">
+                        <span id="word1">GOLDEN KEY</span>
+                    </div>
+                    <div class="line">
+                        <span id="word2">BUILDERS & DEVELOPERS</span>
+                    </div>
+                </h1>
+                
+                <div class="kannada-highlight fade-up">
+                    <p><strong>ನಮ್ಮ ದೊಡ್ಡ ಆಲದಮರದ ಹತ್ತಿರ ನೇರ ಮಾಲೀಕರಿಂದ</strong><br>
+                    <span style="color: var(--gold);">BMRDA APPROVED A KHATA</span><br>
+                    <strong>ಸೈಟು ಗಳು ಮಾರಾಟವಾಗುತ್ತಿದೆ</strong></p>
+                </div>
+                
+                <div class="phone-numbers fade-up">
+                    <div class="phone-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <a href="tel:8971969956">8971969956</a>
+                    </div>
+                    <div class="phone-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <a href="tel:9448330323">9448330323</a>
+                    </div>
+                </div>
+                
+                <p class="hero-subtitle" id="heroSubtitle">Golden Key Builders & Developers - A trusted name in Bangalore real estate with BMRDA approved projects, complete transparency, and long-term value creation.</p>
+                
+                <div class="cta-buttons" id="heroButtons">
+                    <a href="tel:+919448330323" class="btn btn-primary">
+                        <i class="fas fa-phone btn-icon"></i> Call +91 94483 30323
+                    </a>
+                    <a href="https://wa.me/919448330323?text=Hi%20Golden%20Key%20Builders%20%26%20Developers%2C%20I'm%20interested%20in%20your%20BMRDA%20approved%20projects.%20Please%20share%20more%20details." 
+                       target="_blank" class="btn btn-secondary">
+                        <i class="fab fa-whatsapp btn-icon"></i> WhatsApp Enquiry
+                    </a>
+                </div>
+                
+                <div class="trust-badges" id="trustBadges">
+                    <div class="trust-badge">
+                        <div class="trust-icon">
+                            <i class="fas fa-file-contract"></i>
+                        </div>
+                        <div>
+                            <h4>BMRDA Approved</h4>
+                            <p>All Projects Certified</p>
+                        </div>
+                    </div>
+                    <div class="trust-badge">
+                        <div class="trust-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div>
+                            <h4>A Khata</h4>
+                            <p>Clear Documentation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="section-alt">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text fade-up">
+                    <h2 class="section-title">About Golden Key</h2>
+                    <p>Golden Key Builders & Developers is a premier real estate development company based in Bangalore, specializing in BMRDA approved residential and commercial projects. Founded with a vision to provide genuine value and complete transparency in real estate investments.</p>
+                    <p><strong>BMRDA APPROVED A KHATA</strong> - ಸೈಟ್ ಖರೀದಿಸೊ ಸುವರ್ಣ ಅವಕಾಶ ನಿಮ್ಮ ದಾಗಿಸಿಕೊಳ್ಳಿ</p>
+                    
+                    <div class="about-stats">
+                        <div class="stat-item fade-up">
+                            <div class="stat-number">15+</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat-item fade-up" style="transition-delay: 0.1s;">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">Projects Completed</div>
+                        </div>
+                        <div class="stat-item fade-up" style="transition-delay: 0.2s;">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Client Satisfaction</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-image fade-up" style="transition-delay: 0.3s;">
+                    <div class="md-image">
+                    <img src="me.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Services Section -->
+    <section id="services" class="section-gold">
+        <div class="container">
+            <div class="section-header fade-up">
+                <h2 class="section-title">Our Services</h2>
+                <p class="section-subtitle">Comprehensive real estate development solutions with complete legal transparency</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card fade-up">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Residential Development</h3>
+                    <p>BMRDA approved residential plots, villas, and apartments with clear documentation and legal titles.</p>
+                </div>
+                
+                <div class="service-card fade-up" style="transition-delay: 0.1s;">
+                    <div class="service-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Commercial Projects</h3>
+                    <p>Strategic commercial developments in prime locations with high ROI potential and proper approvals.</p>
+                </div>
+                
+                <div class="service-card fade-up" style="transition-delay: 0.2s;">
+                    <div class="service-icon">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h3>Legal Documentation</h3>
+                    <p>Complete legal assistance including Khata transfer, sale deed registration, and all necessary approvals.</p>
+                </div>
+                
+                <div class="service-card fade-up" style="transition-delay: 0.3s;">
+                    <div class="service-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Property Consultation</h3>
+                    <p>Expert guidance on property investment, market analysis, and long-term value appreciation strategies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Video Section -->
+    <section id="video" class="video-section">
+        <div class="container">
+            <div class="section-header fade-up">
+                <h2 class="section-title">Our Vision & Projects</h2>
+                <p class="section-subtitle">Discover how we transform visions into reality with quality and transparency</p>
+            </div>
+            
+            <div class="video-wrapper fade-up">
+                <div class="video-container">
+                    <video id="mainVideo" controls autoplay muted loop playsinline>
+                        <source src="ad2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section-alt">
+        <div class="container">
+            <div class="section-header fade-up">
+                <h2 class="section-title">Client Testimonials</h2>
+                <p class="section-subtitle">What our clients say about their experience with Golden Key</p>
+            </div>
+            
+            <div class="testimonial-slider fade-up">
+                <div class="testimonial-track" id="testimonialTrack">
+                    <!-- Slide 1 -->
+                    <div class="testimonial-slide">
+                        <div class="testimonial-content">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-right"></i>
+                            </div>
+                            <p class="testimonial-text">"Golden Key Builders provided complete transparency throughout the process. Their BMRDA approval gave me confidence, and the documentation was handled professionally. Highly recommended for genuine property investment."</p>
+                            <div class="testimonial-author">Rajesh Kumar</div>
+                            <div class="testimonial-role">Residential Plot Buyer</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 2 -->
+                    <div class="testimonial-slide">
+                        <div class="testimonial-content">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-right"></i>
+                            </div>
+                            <p class="testimonial-text">"As an NRI investor, I needed a trustworthy developer. Golden Key exceeded expectations with their clear communication, proper documentation, and regular updates. My investment is secure with them."</p>
+                            <div class="testimonial-author">Priya Nair</div>
+                            <div class="testimonial-role">NRI Investor</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 3 -->
+                    <div class="testimonial-slide">
+                        <div class="testimonial-content">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-right"></i>
+                            </div>
+                            <p class="testimonial-text">"The legal clarity provided by Golden Key is unmatched. Every document was explained in detail, and the BMRDA approval process was smooth. They truly live up to their name as the 'Golden Key' to secure real estate."</p>
+                            <div class="testimonial-author">Amit Sharma</div>
+                            <div class="testimonial-role">Commercial Property Investor</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slider-dots" id="sliderDots">
+                    <div class="dot active" data-slide="0"></div>
+                    <div class="dot" data-slide="1"></div>
+                    <div class="dot" data-slide="2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ Section -->
+    <section class="section-gold">
+        <div class="container">
+            <div class="section-header fade-up">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Common questions about BMRDA approved properties and our services</p>
+            </div>
+            
+            <div class="faq-container">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item fade-up">
+                    <div class="faq-question">
+                        <span>What does BMRDA approval mean for my property?</span>
+                        <i class="fas fa-plus faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>BMRDA (Bangalore Metropolitan Region Development Authority) approval means the property is legally sanctioned for development, has proper infrastructure planning, and ensures future appreciation. It provides legal security and makes the property bankable for loans.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="faq-item fade-up" style="transition-delay: 0.1s;">
+                    <div class="faq-question">
+                        <span>What is A Khata and why is it important?</span>
+                        <i class="fas fa-plus faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>A Khata is a document that proves you are the legal owner of a property and have paid all taxes. It's essential for obtaining bank loans, building permits, and selling the property in the future. All our properties come with clear A Khata documentation.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="faq-item fade-up" style="transition-delay: 0.2s;">
+                    <div class="faq-question">
+                        <span>Do you assist with home loans?</span>
+                        <i class="fas fa-plus faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we have tie-ups with major banks and financial institutions. Our BMRDA approved A Khata properties are easily eligible for home loans. We assist throughout the loan application and approval process.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="faq-item fade-up" style="transition-delay: 0.3s;">
+                    <div class="faq-question">
+                        <span>Can NRIs invest in your properties?</span>
+                        <i class="fas fa-plus faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely. We have extensive experience working with NRI clients. We handle all legal formalities, provide regular updates, and ensure smooth transactions with complete transparency. Our properties are FEMA compliant for NRI investments.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header fade-up">
+                <h2 class="section-title">Contact Us</h2>
+                <p class="section-subtitle">Get in touch with Golden Key Builders & Developers</p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-info fade-up">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Office Address</h4>
+                            <p>
+                                198, Ullal Main Rd, 2nd Block, Jnananjyothinagar,<br>
+                                Railway Layout, Jnana Ganga Nagar,<br>
+                                Bengaluru, Karnataka 560056
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone Numbers</h4>
+                            <p><strong>8971969956</strong> / <strong>9448330323</strong></p>
+                            <p style="font-size: 0.8rem;">Monday - Saturday: 9:00 AM - 7:00 PM</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email Address</h4>
+                            <p>info@goldenkeygroups.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Website</h4>
+                            <p>https://goldenkeygroups.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-contact">
+                        <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/919448330323" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="tel:+919448330323" title="Call"><i class="fas fa-phone"></i></a>
+                    </div>
+                </div>
+                
+                <div class="map-container fade-up" style="transition-delay: 0.2s;">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.175035154022!2d77.51285951538384!3d12.884734990904366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3f7e4c5f7b7f%3A0x1c1b3b3b3b3b3b3b!2s198%2C%20Ullal%20Main%20Rd%2C%202nd%20Block%2C%20Jnananjyothinagar%2C%20Railway%20Layout%2C%20Jnana%20Ganga%20Nagar%2C%20Bengaluru%2C%20Karnataka%20560056!5e0!3m2!1sen!2sin!4v1638954367890!5m2!1sen!2sin" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content fade-up">
+                <h2>Ready to Invest with Confidence?</h2>
+                <p>Contact Golden Key Builders & Developers today for genuine BMRDA approved A Khata properties with complete legal transparency.</p>
+                <div class="cta-buttons center">
+                    <a href="tel:+919448330323" class="btn btn-primary">
+                        <i class="fas fa-phone btn-icon"></i> Call +91 94483 30323
+                    </a>
+                    <a href="https://wa.me/919448330323?text=Hi%20Golden%20Key%20Builders%20%26%20Developers%2C%20I'm%20interested%20in%20your%20BMRDA%20approved%20projects.%20Please%20share%20more%20details." 
+                       target="_blank" class="btn btn-secondary">
+                        <i class="fab fa-whatsapp btn-icon"></i> WhatsApp Enquiry
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column fade-up">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-key" style="color: white;"></i>
+                        </div>
+                        <div>
+                            <div class="footer-logo-text">GOLDEN KEY</div>
+                            <div class="footer-logo-subtext">BUILDERS & DEVELOPERS</div>
+                        </div>
+                    </div>
+                    <p style="color: rgba(255,255,255,0.7); font-size: 0.85rem;">BMRDA Approved A Khata Real Estate Developer in Bangalore. Direct owner properties since 2008.</p>
+                </div>
+                
+                <div class="footer-column fade-up" style="transition-delay: 0.1s;">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#video">Our Vision</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column fade-up" style="transition-delay: 0.2s;">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><a href="tel:8971969956"><i class="fas fa-phone"></i> 8971969956</a></li>
+                        <li><a href="tel:9448330323"><i class="fas fa-phone"></i> 9448330323</a></li>
+                        <li><a href="mailto:info@goldenkeygroups.com"><i class="fas fa-envelope"></i> Email Us</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> Ullal Main Road, Bengaluru</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Golden Key Builders & Developers. All rights reserved. | BMRDA Approved A Khata</p>
+                <p style="margin-top: 0.3rem; font-size: 0.65rem;">Proprietor: Ranjith KM | Direct Owner | ನೇರ ಮಾಲೀಕರು</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/919448330323?text=Hi%20Golden%20Key%20Builders%20%26%20Developers%2C%20I'm%20interested%20in%20your%20BMRDA%20approved%20A%20Khata%20properties.%20Please%20share%20more%20details." 
+       target="_blank" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    mobileMenu.classList.toggle('active');
+                    const icon = mobileMenuBtn.querySelector('i');
+                    if (mobileMenu.classList.contains('active')) {
+                        icon.classList.remove('fa-bars');
+                        icon.classList.add('fa-times');
+                    } else {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                });
+                
+                // Close mobile menu when clicking a link
+                document.querySelectorAll('.mobile-nav-links a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.remove('active');
+                        mobileMenuBtn.querySelector('i').classList.remove('fa-times');
+                        mobileMenuBtn.querySelector('i').classList.add('fa-bars');
+                    });
+                });
+            }
+            
+            // ANIMATION 1: Fade + Slide Up (Scroll)
+            const fadeElements = document.querySelectorAll('.fade-up');
+            
+            const checkVisibility = () => {
+                fadeElements.forEach(element => {
+                    const rect = element.getBoundingClientRect();
+                    const windowHeight = window.innerHeight;
+                    
+                    if (rect.top < windowHeight - 100) {
+                        element.classList.add('visible');
+                    }
+                });
+            };
+            
+            // Initial check
+            checkVisibility();
+            window.addEventListener('scroll', checkVisibility);
+            
+            // ANIMATION 2: Hero Headline Text Reveal
+            const heroWords = [
+                document.getElementById('word1'),
+                document.getElementById('word2')
+            ];
+            
+            heroWords.forEach((word, index) => {
+                if (word) {
+                    setTimeout(() => {
+                        word.classList.add('visible');
+                    }, index * 300);
+                }
+            });
+            
+            // Hero badge, subtitle, buttons, trust badges
+            const bmrdaBadge = document.getElementById('bmrdaBadge');
+            const heroSubtitle = document.getElementById('heroSubtitle');
+            const heroButtons = document.getElementById('heroButtons');
+            const trustBadges = document.getElementById('trustBadges');
+            
+            setTimeout(() => {
+                if (bmrdaBadge) bmrdaBadge.classList.add('visible');
+            }, 100);
+            
+            setTimeout(() => {
+                if (heroSubtitle) heroSubtitle.classList.add('visible');
+            }, 900);
+            
+            setTimeout(() => {
+                if (heroButtons) heroButtons.classList.add('visible');
+            }, 1200);
+            
+            setTimeout(() => {
+                if (trustBadges) trustBadges.classList.add('visible');
+            }, 1500);
+            
+            // ANIMATION 3: Testimonial Slider
+            const testimonialTrack = document.getElementById('testimonialTrack');
+            const dots = document.querySelectorAll('.dot');
+            let currentSlide = 0;
+            const slideCount = document.querySelectorAll('.testimonial-slide').length;
+            
+            if (testimonialTrack && slideCount > 0) {
+                function goToSlide(slideIndex) {
+                    currentSlide = slideIndex;
+                    testimonialTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+                    
+                    // Update dots
+                    dots.forEach((dot, index) => {
+                        if (index === currentSlide) {
+                            dot.classList.add('active');
+                        } else {
+                            dot.classList.remove('active');
+                        }
+                    });
+                }
+                
+                function nextSlide() {
+                    currentSlide = (currentSlide + 1) % slideCount;
+                    goToSlide(currentSlide);
+                }
+                
+                // Auto slide every 5 seconds
+                let slideInterval = setInterval(nextSlide, 5000);
+                
+                // Dot click events
+                dots.forEach((dot, index) => {
+                    dot.addEventListener('click', () => {
+                        goToSlide(index);
+                        // Reset interval
+                        clearInterval(slideInterval);
+                        slideInterval = setInterval(nextSlide, 5000);
+                    });
+                });
+            }
+            
+            // FAQ Accordion
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item && otherItem.classList.contains('active')) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+            
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        const headerHeight = document.querySelector('header').offsetHeight;
+                        const targetPosition = targetElement.offsetTop - headerHeight;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                        
+                        // Close mobile menu if open
+                        if (mobileMenu && mobileMenu.classList.contains('active')) {
+                            mobileMenu.classList.remove('active');
+                            mobileMenuBtn.querySelector('i').classList.remove('fa-times');
+                            mobileMenuBtn.querySelector('i').classList.add('fa-bars');
+                        }
+                    }
+                });
+            });
+            
+            // Header scroll effect
+            window.addEventListener('scroll', () => {
+                const header = document.querySelector('header');
+                if (window.scrollY > 50) {
+                    header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
+                } else {
+                    header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.05)';
+                }
+            });
+            
+            // Video Popup - Show after 10 seconds
+            const videoPopup = document.getElementById('videoPopup');
+            const closePopup = document.getElementById('closePopup');
+            const popupVideo = document.getElementById('popupVideo');
+            
+            // Show popup after 10 seconds
+            setTimeout(() => {
+                if (videoPopup && !sessionStorage.getItem('videoPopupShown')) {
+                    videoPopup.classList.add('active');
+                    if (popupVideo) {
+                        // Play with sound
+                        popupVideo.muted = false;
+                        popupVideo.play().catch(error => {
+                            console.log('Autoplay with sound prevented:', error);
+                            // If autoplay with sound fails, try with mute
+                            popupVideo.muted = true;
+                            popupVideo.play();
+                        });
+                    }
+                    sessionStorage.setItem('videoPopupShown', 'true');
+                }
+            }, 10000);
+            
+            // Close popup
+            if (closePopup) {
+                closePopup.addEventListener('click', () => {
+                    videoPopup.classList.remove('active');
+                    if (popupVideo) {
+                        popupVideo.pause();
+                    }
+                });
+            }
+            
+            // Close popup when clicking outside
+            if (videoPopup) {
+                videoPopup.addEventListener('click', (e) => {
+                    if (e.target === videoPopup) {
+                        videoPopup.classList.remove('active');
+                        if (popupVideo) {
+                            popupVideo.pause();
+                        }
+                    }
+                });
+            }
+            
+            // Handle main video - attempt to play with sound
+            const mainVideo = document.getElementById('mainVideo');
+            if (mainVideo) {
+                // Try to play with sound
+                mainVideo.muted = false;
+                mainVideo.play().catch(error => {
+                    console.log('Main video autoplay with sound prevented:', error);
+                    // If autoplay with sound fails, use muted autoplay (browsers allow this)
+                    mainVideo.muted = true;
+                    mainVideo.play();
+                    
+                    // Add unmute button or let user click to unmute
+                    mainVideo.addEventListener('click', function() {
+                        this.muted = false;
+                    });
+                });
+            }
+            
+            // Handle window resize for mobile menu
+            window.addEventListener('resize', () => {
+                if (window.innerWidth > 768 && mobileMenu && mobileMenu.classList.contains('active')) {
+                    mobileMenu.classList.remove('active');
+                    mobileMenuBtn.querySelector('i').classList.remove('fa-times');
+                    mobileMenuBtn.querySelector('i').classList.add('fa-bars');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
