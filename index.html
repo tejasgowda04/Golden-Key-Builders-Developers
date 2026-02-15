@@ -24,6 +24,8 @@
             --text-main: #1E1E1E;
             --text-muted: #6B6B6B;
             --border-light: #E5E5E5;
+            --success: #28a745;
+            --info: #17a2b8;
         }
         
         /* Reset & Base Styles */
@@ -119,16 +121,21 @@
             text-decoration: none;
         }
         
-        .logo-icon {
-            width: 40px;
-            height: 40px;
-            background-color: var(--gold);
-            border-radius: 8px;
+        .logo-image {
+            width: 45px;
+            height: 45px;
+            margin-right: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-right: 10px;
             flex-shrink: 0;
+        }
+        
+        .logo-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
         }
         
         .logo-text {
@@ -280,6 +287,14 @@
             margin: 1.5rem 0;
             font-size: 1.1rem;
             border-left: 4px solid var(--gold);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease;
+        }
+        
+        .kannada-highlight.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
         
         .hero-subtitle {
@@ -303,12 +318,24 @@
             flex-wrap: wrap;
             gap: 1.5rem;
             margin: 1.5rem 0;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease;
+        }
+        
+        .phone-numbers.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
         
         .phone-item {
             display: flex;
             align-items: center;
             gap: 0.8rem;
+            background-color: var(--bg-alt);
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
         }
         
         .phone-item i {
@@ -321,6 +348,47 @@
             color: var(--text-main);
             font-weight: 600;
             font-size: 1.1rem;
+        }
+        
+        /* Hero Badges */
+        .hero-badges {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin: 2rem 0;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease;
+        }
+        
+        .hero-badges.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .hero-badge-item {
+            background-color: var(--bg-alt);
+            padding: 1rem 0.5rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border-light);
+        }
+        
+        .hero-badge-item i {
+            color: var(--gold);
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .hero-badge-item h4 {
+            font-size: 0.9rem;
+            margin-bottom: 0.2rem;
+        }
+        
+        .hero-badge-item p {
+            font-size: 0.7rem;
+            color: var(--text-muted);
         }
         
         /* Word Carousel */
@@ -407,7 +475,15 @@
             display: flex;
             flex-wrap: wrap;
             gap: 1rem;
-            margin-top: 2rem;
+            margin-top: 1rem;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease;
+        }
+        
+        .trust-badges.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
         
         .trust-badge {
@@ -418,14 +494,7 @@
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             transition: transform 0.3s ease;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.8s ease;
-        }
-        
-        .trust-badge.visible {
-            opacity: 1;
-            transform: translateY(0);
+            flex: 1 1 200px;
         }
         
         .trust-badge:hover {
@@ -494,6 +563,14 @@
             font-size: 0.95rem;
         }
         
+        .about-highlight {
+            background-color: var(--gold-soft);
+            padding: 1rem;
+            border-radius: 10px;
+            margin: 1.5rem 0;
+            border-left: 4px solid var(--gold);
+        }
+        
         .about-stats {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -503,6 +580,10 @@
         
         .stat-item {
             text-align: center;
+            background-color: var(--bg-alt);
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
         }
         
         .stat-number {
@@ -518,9 +599,42 @@
             margin-top: 0.3rem;
         }
         
+        /* About Badges */
+        .about-badges {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .about-badge {
+            background-color: var(--bg-alt);
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border-light);
+        }
+        
+        .about-badge i {
+            color: var(--gold);
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .about-badge h4 {
+            font-size: 1rem;
+            margin-bottom: 0.2rem;
+        }
+        
+        .about-badge p {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+        
         .md-image {
             width: 100%;
-            height: 350px;
+            height: 400px;
             background: linear-gradient(135deg, var(--gold-soft) 0%, var(--gold) 100%);
             border-radius: 16px;
             display: flex;
@@ -530,12 +644,17 @@
             color: white;
             position: relative;
             overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
         }
         
-        .md-image i {
-            font-size: 5rem;
+        .md-image img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
             margin-bottom: 1rem;
-            color: white;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
         
         .md-image h3 {
@@ -983,7 +1102,20 @@
         }
         
         .footer-logo .logo-icon {
+            width: 40px;
+            height: 40px;
+            background-color: var(--gold);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             margin-right: 8px;
+            flex-shrink: 0;
+        }
+        
+        .footer-logo .logo-icon i {
+            color: white;
+            font-size: 1.2rem;
         }
         
         .footer-logo-text {
@@ -1059,6 +1191,10 @@
             .nav-links {
                 gap: 1rem;
             }
+            
+            .hero-badges {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
         
         @media (max-width: 768px) {
@@ -1090,6 +1226,10 @@
             .about-stats {
                 grid-template-columns: 1fr;
                 gap: 1rem;
+            }
+            
+            .about-badges {
+                grid-template-columns: 1fr 1fr;
             }
             
             .trust-badges {
@@ -1126,6 +1266,10 @@
                 gap: 0.8rem;
             }
             
+            .hero-badges {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
             .video-popup-content {
                 width: 95%;
             }
@@ -1153,6 +1297,14 @@
                 padding: 0.8rem 1rem;
             }
             
+            .hero-badges {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-badges {
+                grid-template-columns: 1fr;
+            }
+            
             .service-card {
                 padding: 1.5rem;
             }
@@ -1174,6 +1326,14 @@
                 width: 50px;
                 height: 50px;
                 font-size: 1.5rem;
+            }
+            
+            .phone-item {
+                width: 100%;
+            }
+            
+            .phone-item a {
+                font-size: 1rem;
             }
         }
     </style>
@@ -1202,8 +1362,8 @@
         <div class="container">
             <div class="header-content">
                 <a href="#home" class="logo">
-                    <div class="logo-icon">
-                        <i class="fas fa-key" style="color: white;"></i>
+                    <div class="logo-image">
+                        <img src="logo.png" alt="Golden Key Builders & Developers Logo" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-key\' style=\'color: white; font-size: 24px;\'></i>';">
                     </div>
                     <div>
                         <div class="logo-text">GOLDEN KEY</div>
@@ -1260,13 +1420,13 @@
                     </div>
                 </h1>
                 
-                <div class="kannada-highlight fade-up">
+                <div class="kannada-highlight" id="kannadaHighlight">
                     <p><strong>ನಮ್ಮ ದೊಡ್ಡ ಆಲದಮರದ ಹತ್ತಿರ ನೇರ ಮಾಲೀಕರಿಂದ</strong><br>
                     <span style="color: var(--gold);">BMRDA APPROVED A KHATA</span><br>
                     <strong>ಸೈಟು ಗಳು ಮಾರಾಟವಾಗುತ್ತಿದೆ</strong></p>
                 </div>
                 
-                <div class="phone-numbers fade-up">
+                <div class="phone-numbers" id="phoneNumbers">
                     <div class="phone-item">
                         <i class="fas fa-phone-alt"></i>
                         <a href="tel:8971969956">8971969956</a>
@@ -1278,6 +1438,30 @@
                 </div>
                 
                 <p class="hero-subtitle" id="heroSubtitle">Golden Key Builders & Developers - A trusted name in Bangalore real estate with BMRDA approved projects, complete transparency, and long-term value creation.</p>
+                
+                <!-- Hero Badges to Fill Space -->
+                <div class="hero-badges" id="heroBadges">
+                    <div class="hero-badge-item">
+                        <i class="fas fa-file-contract"></i>
+                        <h4>BMRDA Approved</h4>
+                        <p>Legal & Certified</p>
+                    </div>
+                    <div class="hero-badge-item">
+                        <i class="fas fa-home"></i>
+                        <h4>A Khata</h4>
+                        <p>Clear Title</p>
+                    </div>
+                    <div class="hero-badge-item">
+                        <i class="fas fa-hand-holding-usd"></i>
+                        <h4>Bank Loan</h4>
+                        <p>Easy Approval</p>
+                    </div>
+                    <div class="hero-badge-item">
+                        <i class="fas fa-user-tie"></i>
+                        <h4>Direct Owner</h4>
+                        <p>No Broker</p>
+                    </div>
+                </div>
                 
                 <div class="cta-buttons" id="heroButtons">
                     <a href="tel:+919448330323" class="btn btn-primary">
@@ -1320,7 +1504,10 @@
                 <div class="about-text fade-up">
                     <h2 class="section-title">About Golden Key</h2>
                     <p>Golden Key Builders & Developers is a premier real estate development company based in Bangalore, specializing in BMRDA approved residential and commercial projects. Founded with a vision to provide genuine value and complete transparency in real estate investments.</p>
-                    <p><strong>BMRDA APPROVED A KHATA</strong> - ಸೈಟ್ ಖರೀದಿಸೊ ಸುವರ್ಣ ಅವಕಾಶ ನಿಮ್ಮ ದಾಗಿಸಿಕೊಳ್ಳಿ</p>
+                    
+                    <div class="about-highlight">
+                        <p><strong>BMRDA APPROVED A KHATA</strong> – ಸೈಟ್ ಖರೀದಿಸೊ ಸುವರ್ಣ ಅವಕಾಶ ನಿಮ್ಮ ದಾಗಿಸಿಕೊಳ್ಳಿ</p>
+                    </div>
                     
                     <div class="about-stats">
                         <div class="stat-item fade-up">
@@ -1336,11 +1523,38 @@
                             <div class="stat-label">Client Satisfaction</div>
                         </div>
                     </div>
+                    
+                    <!-- About Badges -->
+                    <div class="about-badges">
+                        <div class="about-badge">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <h4>Prime Locations</h4>
+                            <p>Bangalore</p>
+                        </div>
+                        <div class="about-badge">
+                            <i class="fas fa-file-signature"></i>
+                            <h4>Legal Clarity</h4>
+                            <p>100% Documentation</p>
+                        </div>
+                        <div class="about-badge">
+                            <i class="fas fa-handshake"></i>
+                            <h4>Direct Deal</h4>
+                            <p>Owner to Buyer</p>
+                        </div>
+                        <div class="about-badge">
+                            <i class="fas fa-clock"></i>
+                            <h4>Quick Possession</h4>
+                            <p>Ready Sites</p>
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="about-image fade-up" style="transition-delay: 0.3s;">
                     <div class="md-image">
-                    <img src="me.png">
+                        <img src="me.png" alt="Ranjith KM - Managing Director" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-user-tie\' style=\'font-size: 5rem; margin-bottom: 1rem;\'></i><h3>Ranjith KM</h3><p>Managing Director</p>'">
+                        <h3>Ranjith KM</h3>
+                        <p>Managing Director</p>
+                        <p style="font-size: 0.7rem; margin-top: 0.5rem;">Direct Owner | ನೇರ ಮಾಲೀಕರು</p>
                     </div>
                 </div>
             </div>
@@ -1622,7 +1836,7 @@
                 <div class="footer-column fade-up">
                     <div class="footer-logo">
                         <div class="logo-icon">
-                            <i class="fas fa-key" style="color: white;"></i>
+                            <i class="fas fa-key"></i>
                         </div>
                         <div>
                             <div class="footer-logo-text">GOLDEN KEY</div>
@@ -1732,7 +1946,10 @@
             
             // Hero badge, subtitle, buttons, trust badges
             const bmrdaBadge = document.getElementById('bmrdaBadge');
+            const kannadaHighlight = document.getElementById('kannadaHighlight');
+            const phoneNumbers = document.getElementById('phoneNumbers');
             const heroSubtitle = document.getElementById('heroSubtitle');
+            const heroBadges = document.getElementById('heroBadges');
             const heroButtons = document.getElementById('heroButtons');
             const trustBadges = document.getElementById('trustBadges');
             
@@ -1741,16 +1958,28 @@
             }, 100);
             
             setTimeout(() => {
+                if (kannadaHighlight) kannadaHighlight.classList.add('visible');
+            }, 300);
+            
+            setTimeout(() => {
+                if (phoneNumbers) phoneNumbers.classList.add('visible');
+            }, 500);
+            
+            setTimeout(() => {
                 if (heroSubtitle) heroSubtitle.classList.add('visible');
+            }, 700);
+            
+            setTimeout(() => {
+                if (heroBadges) heroBadges.classList.add('visible');
             }, 900);
             
             setTimeout(() => {
                 if (heroButtons) heroButtons.classList.add('visible');
-            }, 1200);
+            }, 1100);
             
             setTimeout(() => {
                 if (trustBadges) trustBadges.classList.add('visible');
-            }, 1500);
+            }, 1300);
             
             // ANIMATION 3: Testimonial Slider
             const testimonialTrack = document.getElementById('testimonialTrack');
@@ -1854,16 +2083,19 @@
             const closePopup = document.getElementById('closePopup');
             const popupVideo = document.getElementById('popupVideo');
             
-            // Show popup after 10 seconds
+            // Check if popup has been shown before
+            const popupShown = sessionStorage.getItem('videoPopupShown');
+            
+            // Show popup after 10 seconds if not shown before
             setTimeout(() => {
-                if (videoPopup && !sessionStorage.getItem('videoPopupShown')) {
+                if (videoPopup && !popupShown) {
                     videoPopup.classList.add('active');
                     if (popupVideo) {
-                        // Play with sound
+                        // Try to play with sound
                         popupVideo.muted = false;
                         popupVideo.play().catch(error => {
                             console.log('Autoplay with sound prevented:', error);
-                            // If autoplay with sound fails, try with mute
+                            // If autoplay with sound fails, use muted autoplay
                             popupVideo.muted = true;
                             popupVideo.play();
                         });
