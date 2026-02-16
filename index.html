@@ -138,7 +138,7 @@
             height: 100%;
             object-fit: contain;
             display: block;
-            filter: brightness(0) invert(1);
+            /* REMOVED filter: brightness(0) invert(1) from header logo */
         }
         
         .logo-text {
@@ -288,29 +288,6 @@
             opacity: 1;
             transform: translateY(0);
             transition: all 0.8s ease;
-        }
-        
-        .kannada-highlight {
-            background-color: var(--gold-soft);
-            padding: 1rem 1.5rem;
-            border-radius: 12px;
-            margin: 1.5rem 0;
-            font-size: 1.1rem;
-            border-left: 4px solid var(--gold);
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.8s ease;
-            border: 1px solid var(--gold);
-            color: var(--text-main);
-        }
-        
-        .kannada-highlight.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        .kannada-highlight span {
-            color: var(--gold) !important;
         }
         
         .hero-subtitle {
@@ -785,94 +762,6 @@
             display: block;
             object-fit: contain;
             max-height: 70vh;
-        }
-        
-        /* Video Popup Modal */
-        .video-popup-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.95);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 9999;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.5s ease;
-            backdrop-filter: blur(10px);
-        }
-        
-        .video-popup-overlay.active {
-            opacity: 1;
-            visibility: visible;
-        }
-        
-        .video-popup-content {
-            width: 95%;
-            max-width: 500px;
-            background-color: var(--bg-alt);
-            border-radius: 12px;
-            overflow: hidden;
-            transform: scale(0.9);
-            transition: transform 0.5s ease;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-            border: 1px solid var(--gold);
-        }
-        
-        .video-popup-overlay.active .video-popup-content {
-            transform: scale(1);
-        }
-        
-        .video-popup-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0.8rem 1rem;
-            background-color: var(--bg-alt);
-            border-bottom: 1px solid var(--gold);
-        }
-        
-        .video-popup-header h3 {
-            color: var(--gold);
-            margin: 0;
-            font-size: 1rem;
-        }
-        
-        .close-popup {
-            background: none;
-            border: none;
-            color: var(--text-muted);
-            font-size: 1.3rem;
-            cursor: pointer;
-            width: 30px;
-            height: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            transition: all 0.3s ease;
-        }
-        
-        .close-popup:hover {
-            color: var(--gold);
-            background-color: rgba(255, 255, 255, 0.1);
-        }
-        
-        .popup-video-container {
-            position: relative;
-            width: 100%;
-            background-color: #000;
-        }
-        
-        .popup-video-container video {
-            width: 100%;
-            height: auto;
-            display: block;
-            object-fit: contain;
-            max-height: 80vh;
         }
         
         /* Testimonials Slider */
@@ -1361,10 +1250,6 @@
             .hero-badges {
                 grid-template-columns: repeat(2, 1fr);
             }
-            
-            .video-popup-content {
-                width: 95%;
-            }
         }
         
         @media (max-width: 480px) {
@@ -1382,11 +1267,6 @@
             
             .hero-subtitle {
                 font-size: 0.9rem;
-            }
-            
-            .kannada-highlight {
-                font-size: 0.95rem;
-                padding: 0.8rem 1rem;
             }
             
             .hero-badges {
@@ -1431,24 +1311,6 @@
     </style>
 </head>
 <body>
-    <!-- Video Popup Modal -->
-    <div class="video-popup-overlay" id="videoPopup">
-        <div class="video-popup-content">
-            <div class="video-popup-header">
-                <h3>Golden Key Builders & Developers</h3>
-                <button class="close-popup" id="closePopup">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            <div class="popup-video-container">
-                <video id="popupVideo" controls autoplay muted loop playsinline>
-                    <source src="ad1.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </div>
-    </div>
-    
     <!-- Header -->
     <header>
         <div class="container">
@@ -1493,15 +1355,11 @@
             </ul>
         </div>
     </header>
-    
+
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
-                <div class="bmrda-badge" id="bmrdaBadge">
-                    <i class="fas fa-check-circle"></i>
-                    BMRDA APPROVED A KHATA
-                </div>
                 
                 <h1 class="hero-headline">
                     <div class="line">
@@ -1512,22 +1370,6 @@
                     </div>
                 </h1>
                 
-                <div class="kannada-highlight" id="kannadaHighlight">
-                    <p><strong>ನಮ್ಮ ದೊಡ್ಡ ಆಲದಮರದ ಹತ್ತಿರ ನೇರ ಮಾಲೀಕರಿಂದ</strong><br>
-                    <span>BMRDA APPROVED A KHATA</span><br>
-                    <strong>ಸೈಟು ಗಳು ಮಾರಾಟವಾಗುತ್ತಿದೆ</strong></p>
-                </div>
-                
-                <div class="phone-numbers" id="phoneNumbers">
-                    <div class="phone-item">
-                        <i class="fas fa-phone-alt"></i>
-                        <a href="tel:8971969956">8971969956</a>
-                    </div>
-                    <div class="phone-item">
-                        <i class="fas fa-phone-alt"></i>
-                        <a href="tel:9448330323">9448330323</a>
-                    </div>
-                </div>
                 
                 <p class="hero-subtitle" id="heroSubtitle">Golden Key Builders & Developers - A trusted name in Bangalore real estate with BMRDA approved projects, complete transparency, and long-term value creation.</p>
                 
@@ -1884,8 +1726,8 @@
                     </div>
                     
                     <div class="social-contact">
-                        <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/share/1HUBtkmxQ6/" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/golden_key_groups?utm_source=qr&igsh=MWFuMTdlc2hrZmE3MQ%3D%3D" title="Instagram"><i class="fab fa-instagram"></i></a>
                         <a href="https://wa.me/919448330323" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                         <a href="tel:+919448330323" title="Call"><i class="fas fa-phone"></i></a>
                     </div>
@@ -2040,7 +1882,6 @@
             
             // Hero badge, subtitle, buttons, trust badges
             const bmrdaBadge = document.getElementById('bmrdaBadge');
-            const kannadaHighlight = document.getElementById('kannadaHighlight');
             const phoneNumbers = document.getElementById('phoneNumbers');
             const heroSubtitle = document.getElementById('heroSubtitle');
             const heroBadges = document.getElementById('heroBadges');
@@ -2052,28 +1893,24 @@
             }, 100);
             
             setTimeout(() => {
-                if (kannadaHighlight) kannadaHighlight.classList.add('visible');
+                if (phoneNumbers) phoneNumbers.classList.add('visible');
             }, 300);
             
             setTimeout(() => {
-                if (phoneNumbers) phoneNumbers.classList.add('visible');
+                if (heroSubtitle) heroSubtitle.classList.add('visible');
             }, 500);
             
             setTimeout(() => {
-                if (heroSubtitle) heroSubtitle.classList.add('visible');
+                if (heroBadges) heroBadges.classList.add('visible');
             }, 700);
             
             setTimeout(() => {
-                if (heroBadges) heroBadges.classList.add('visible');
+                if (heroButtons) heroButtons.classList.add('visible');
             }, 900);
             
             setTimeout(() => {
-                if (heroButtons) heroButtons.classList.add('visible');
-            }, 1100);
-            
-            setTimeout(() => {
                 if (trustBadges) trustBadges.classList.add('visible');
-            }, 1300);
+            }, 1100);
             
             // ANIMATION 3: Testimonial Slider
             const testimonialTrack = document.getElementById('testimonialTrack');
@@ -2172,53 +2009,7 @@
                 }
             });
             
-            // Video Popup - Show after 10 seconds
-            const videoPopup = document.getElementById('videoPopup');
-            const closePopup = document.getElementById('closePopup');
-            const popupVideo = document.getElementById('popupVideo');
-            
-            // Check if popup has been shown before
-            const popupShown = sessionStorage.getItem('videoPopupShown');
-            
-            // Show popup after 10 seconds if not shown before
-            setTimeout(() => {
-                if (videoPopup && !popupShown) {
-                    videoPopup.classList.add('active');
-                    if (popupVideo) {
-                        // Try to play with sound
-                        popupVideo.muted = false;
-                        popupVideo.play().catch(error => {
-                            console.log('Autoplay with sound prevented:', error);
-                            // If autoplay with sound fails, use muted autoplay
-                            popupVideo.muted = true;
-                            popupVideo.play();
-                        });
-                    }
-                    sessionStorage.setItem('videoPopupShown', 'true');
-                }
-            }, 10000);
-            
-            // Close popup
-            if (closePopup) {
-                closePopup.addEventListener('click', () => {
-                    videoPopup.classList.remove('active');
-                    if (popupVideo) {
-                        popupVideo.pause();
-                    }
-                });
-            }
-            
-            // Close popup when clicking outside
-            if (videoPopup) {
-                videoPopup.addEventListener('click', (e) => {
-                    if (e.target === videoPopup) {
-                        videoPopup.classList.remove('active');
-                        if (popupVideo) {
-                            popupVideo.pause();
-                        }
-                    }
-                });
-            }
+            // REMOVED VIDEO POPUP CODE COMPLETELY
             
             // Handle main video - attempt to play with sound
             const mainVideo = document.getElementById('mainVideo');
