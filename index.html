@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
     <title>Golden Key Builders & Developers | BMRDA Approved A Khata | Bengaluru Real Estate</title>
-    <meta name="description" content="Golden Key Builders & Developers - BMRDA Approved A Khata sites for sale in Bengaluru. Direct owner property with complete transparency.">
-    
+    <meta name="description"
+        content="Golden Key Builders & Developers - BMRDA Approved A Khata sites for sale in Bengaluru. Direct owner property with complete transparency.">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <style>
         /* CSS Variables - DARK THEME */
         :root {
@@ -27,19 +31,19 @@
             --success: #28a745;
             --info: #17a2b8;
         }
-        
+
         /* Reset & Base Styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         html {
             scroll-behavior: smooth;
             overflow-x: hidden;
         }
-        
+
         body {
             font-family: 'Poppins', sans-serif;
             background-color: var(--bg-main);
@@ -47,35 +51,40 @@
             line-height: 1.6;
             overflow-x: hidden;
         }
-        
+
         /* Typography */
-        h1, h2, h3, h4, h5, h6 {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             font-family: 'Playfair Display', serif;
             font-weight: 600;
             line-height: 1.3;
             margin-bottom: 1.5rem;
             color: var(--text-main);
         }
-        
+
         h1 {
             font-size: clamp(2rem, 5vw, 3.5rem);
             font-weight: 700;
         }
-        
+
         h2 {
             font-size: clamp(1.8rem, 4vw, 2.5rem);
         }
-        
+
         h3 {
             font-size: clamp(1.3rem, 3vw, 1.8rem);
         }
-        
+
         /* Kannada Text */
         .kannada {
             font-family: 'Poppins', sans-serif;
             line-height: 1.5;
         }
-        
+
         /* Container */
         .container {
             width: 100%;
@@ -83,20 +92,20 @@
             margin: 0 auto;
             padding: 0 1rem;
         }
-        
+
         /* Sections */
         section {
             padding: 4rem 0;
         }
-        
+
         .section-alt {
             background-color: var(--bg-alt);
         }
-        
+
         .section-gold {
             background: linear-gradient(180deg, #1A1A1A 0%, #0A0A0A 100%);
         }
-        
+
         /* Header & Navigation */
         header {
             position: fixed;
@@ -109,20 +118,20 @@
             transition: all 0.3s ease;
             border-bottom: 1px solid var(--gold);
         }
-        
+
         .header-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 0.8rem 0;
         }
-        
+
         .logo {
             display: flex;
             align-items: center;
             text-decoration: none;
         }
-        
+
         .logo-image {
             width: 45px;
             height: 45px;
@@ -132,7 +141,7 @@
             justify-content: center;
             flex-shrink: 0;
         }
-        
+
         .logo-image img {
             width: 100%;
             height: 100%;
@@ -140,7 +149,7 @@
             display: block;
             /* REMOVED filter: brightness(0) invert(1) from header logo */
         }
-        
+
         .logo-text {
             font-family: 'Playfair Display', serif;
             font-size: 1.1rem;
@@ -148,20 +157,20 @@
             color: var(--text-main);
             line-height: 1.2;
         }
-        
+
         .logo-subtext {
             font-size: 0.55rem;
             color: var(--gold);
             letter-spacing: 0.5px;
             margin-top: -3px;
         }
-        
+
         .nav-links {
             display: flex;
             list-style: none;
             gap: 1.5rem;
         }
-        
+
         .nav-links a {
             text-decoration: none;
             color: var(--text-muted);
@@ -169,11 +178,11 @@
             transition: color 0.3s ease;
             font-size: 0.9rem;
         }
-        
+
         .nav-links a:hover {
             color: var(--gold);
         }
-        
+
         .mobile-menu-btn {
             display: none;
             background: none;
@@ -182,7 +191,7 @@
             color: var(--text-main);
             cursor: pointer;
         }
-        
+
         /* Mobile Menu */
         .mobile-menu {
             position: fixed;
@@ -199,21 +208,21 @@
             visibility: hidden;
             border-bottom: 1px solid var(--gold);
         }
-        
+
         .mobile-menu.active {
             transform: translateY(0);
             opacity: 1;
             visibility: visible;
         }
-        
+
         .mobile-nav-links {
             list-style: none;
         }
-        
+
         .mobile-nav-links li {
             margin-bottom: 1rem;
         }
-        
+
         .mobile-nav-links a {
             text-decoration: none;
             color: var(--text-muted);
@@ -221,11 +230,11 @@
             font-weight: 500;
             display: block;
         }
-        
+
         .mobile-nav-links a:hover {
             color: var(--gold);
         }
-        
+
         /* Hero Section */
         .hero {
             min-height: 100vh;
@@ -236,12 +245,12 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .hero-content {
             max-width: 800px;
             width: 100%;
         }
-        
+
         .bmrda-badge {
             display: inline-flex;
             align-items: center;
@@ -257,39 +266,39 @@
             border: 1px solid var(--gold);
             color: var(--gold);
         }
-        
+
         .bmrda-badge.visible {
             opacity: 1;
             transform: translateY(0);
         }
-        
+
         .bmrda-badge i {
             color: var(--gold);
             margin-right: 8px;
         }
-        
+
         .hero-headline {
             margin-bottom: 1.5rem;
         }
-        
+
         .hero-headline .line {
             display: block;
             overflow: hidden;
             margin-bottom: 5px;
         }
-        
+
         .hero-headline span {
             display: inline-block;
             opacity: 0;
             transform: translateY(30px);
         }
-        
+
         .hero-headline span.visible {
             opacity: 1;
             transform: translateY(0);
             transition: all 0.8s ease;
         }
-        
+
         .hero-subtitle {
             font-size: 1rem;
             color: var(--text-muted);
@@ -299,12 +308,12 @@
             transform: translateY(20px);
             transition: all 0.8s ease;
         }
-        
+
         .hero-subtitle.visible {
             opacity: 1;
             transform: translateY(0);
         }
-        
+
         /* Phone Numbers */
         .phone-numbers {
             display: flex;
@@ -315,12 +324,12 @@
             transform: translateY(20px);
             transition: all 0.8s ease;
         }
-        
+
         .phone-numbers.visible {
             opacity: 1;
             transform: translateY(0);
         }
-        
+
         .phone-item {
             display: flex;
             align-items: center;
@@ -331,19 +340,19 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
             border: 1px solid var(--gold);
         }
-        
+
         .phone-item i {
             color: var(--gold);
             font-size: 1.2rem;
         }
-        
+
         .phone-item a {
             text-decoration: none;
             color: var(--text-main);
             font-weight: 600;
             font-size: 1.1rem;
         }
-        
+
         /* Hero Badges */
         .hero-badges {
             display: grid;
@@ -354,12 +363,12 @@
             transform: translateY(20px);
             transition: all 0.8s ease;
         }
-        
+
         .hero-badges.visible {
             opacity: 1;
             transform: translateY(0);
         }
-        
+
         .hero-badge-item {
             background-color: var(--bg-alt);
             padding: 1rem 0.5rem;
@@ -368,24 +377,24 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
             border: 1px solid var(--gold);
         }
-        
+
         .hero-badge-item i {
             color: var(--gold);
             font-size: 1.5rem;
             margin-bottom: 0.5rem;
         }
-        
+
         .hero-badge-item h4 {
             font-size: 0.9rem;
             margin-bottom: 0.2rem;
             color: var(--text-main);
         }
-        
+
         .hero-badge-item p {
             font-size: 0.7rem;
             color: var(--text-muted);
         }
-        
+
         /* Word Carousel */
         .word-carousel {
             display: inline-block;
@@ -394,21 +403,36 @@
             overflow: hidden;
             vertical-align: bottom;
         }
-        
+
         .word-carousel span {
             display: block;
             animation: text-slide 12s ease-in-out infinite;
             opacity: 1 !important;
             transform: none !important;
         }
-        
+
         @keyframes text-slide {
-            0%, 25% { transform: translateY(0); }
-            33%, 58% { transform: translateY(-100%); }
-            66%, 91% { transform: translateY(-200%); }
-            100% { transform: translateY(-300%); }
+
+            0%,
+            25% {
+                transform: translateY(0);
+            }
+
+            33%,
+            58% {
+                transform: translateY(-100%);
+            }
+
+            66%,
+            91% {
+                transform: translateY(-200%);
+            }
+
+            100% {
+                transform: translateY(-300%);
+            }
         }
-        
+
         /* Buttons */
         .btn {
             display: inline-flex;
@@ -424,33 +448,33 @@
             font-family: 'Poppins', sans-serif;
             font-size: 0.95rem;
         }
-        
+
         .btn-primary {
             background-color: var(--gold);
             color: #0A0A0A;
         }
-        
+
         .btn-primary:hover {
             transform: translateY(-3px);
             box-shadow: 0 10px 25px rgba(201, 162, 77, 0.3);
         }
-        
+
         .btn-secondary {
             background-color: transparent;
             color: var(--text-main);
             border: 2px solid var(--gold);
         }
-        
+
         .btn-secondary:hover {
             background-color: var(--gold);
             color: #0A0A0A;
             transform: translateY(-3px);
         }
-        
+
         .btn-icon {
             margin-right: 8px;
         }
-        
+
         .cta-buttons {
             display: flex;
             gap: 1rem;
@@ -460,12 +484,12 @@
             transform: translateY(20px);
             transition: all 0.8s ease;
         }
-        
+
         .cta-buttons.visible {
             opacity: 1;
             transform: translateY(0);
         }
-        
+
         /* Trust Badges */
         .trust-badges {
             display: flex;
@@ -476,12 +500,12 @@
             transform: translateY(20px);
             transition: all 0.8s ease;
         }
-        
+
         .trust-badges.visible {
             opacity: 1;
             transform: translateY(0);
         }
-        
+
         .trust-badge {
             display: flex;
             align-items: center;
@@ -493,12 +517,12 @@
             flex: 1 1 200px;
             border: 1px solid var(--gold);
         }
-        
+
         .trust-badge:hover {
             transform: translateY(-5px);
             border-color: var(--gold);
         }
-        
+
         .trust-icon {
             width: 40px;
             height: 40px;
@@ -511,29 +535,29 @@
             flex-shrink: 0;
             border: 1px solid var(--gold);
         }
-        
+
         .trust-icon i {
             color: var(--gold);
             font-size: 1.2rem;
         }
-        
+
         .trust-badge h4 {
             color: var(--text-main);
             font-size: 1rem;
             margin-bottom: 0.2rem;
         }
-        
+
         .trust-badge p {
             color: var(--text-muted);
             font-size: 0.85rem;
         }
-        
+
         /* Section Headers */
         .section-header {
             text-align: center;
             margin-bottom: 2.5rem;
         }
-        
+
         .section-title {
             position: relative;
             display: inline-block;
@@ -541,7 +565,7 @@
             font-size: clamp(1.8rem, 4vw, 2.5rem);
             color: var(--text-main);
         }
-        
+
         .section-title:after {
             content: '';
             position: absolute;
@@ -552,14 +576,14 @@
             height: 3px;
             background-color: var(--gold);
         }
-        
+
         .section-subtitle {
             color: var(--text-muted);
             font-size: 1rem;
             max-width: 600px;
             margin: 0 auto;
         }
-        
+
         /* About Section */
         .about-content {
             display: grid;
@@ -567,13 +591,13 @@
             gap: 3rem;
             align-items: center;
         }
-        
+
         .about-text p {
             margin-bottom: 1rem;
             color: var(--text-muted);
             font-size: 0.95rem;
         }
-        
+
         .about-highlight {
             background-color: var(--gold-soft);
             padding: 1rem;
@@ -583,18 +607,18 @@
             border: 1px solid var(--gold);
             color: var(--text-main);
         }
-        
+
         .about-highlight strong {
             color: var(--gold);
         }
-        
+
         .about-stats {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 1.5rem;
             margin-top: 2rem;
         }
-        
+
         .stat-item {
             text-align: center;
             background-color: var(--bg-alt);
@@ -603,20 +627,20 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
             border: 1px solid var(--gold);
         }
-        
+
         .stat-number {
             font-size: 2rem;
             font-weight: 700;
             color: var(--gold);
             font-family: 'Playfair Display', serif;
         }
-        
+
         .stat-label {
             font-size: 0.85rem;
             color: var(--text-muted);
             margin-top: 0.3rem;
         }
-        
+
         /* About Badges */
         .about-badges {
             display: grid;
@@ -624,7 +648,7 @@
             gap: 1rem;
             margin-top: 2rem;
         }
-        
+
         .about-badge {
             background-color: var(--bg-alt);
             padding: 1rem;
@@ -633,27 +657,28 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
             border: 1px solid var(--gold);
         }
-        
+
         .about-badge i {
             color: var(--gold);
             font-size: 1.5rem;
             margin-bottom: 0.5rem;
         }
-        
+
         .about-badge h4 {
             font-size: 1rem;
             margin-bottom: 0.2rem;
             color: var(--text-main);
         }
-        
+
         .about-badge p {
             font-size: 0.8rem;
             color: var(--text-muted);
         }
-        
+
         .md-image {
             width: 100%;
-            height: 400px;
+            height: auto;
+            padding: 2.5rem 1rem;
             background: linear-gradient(135deg, var(--gold-soft) 0%, var(--bg-alt) 100%);
             border-radius: 16px;
             display: flex;
@@ -666,7 +691,7 @@
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
             border: 2px solid var(--gold);
         }
-        
+
         .md-image img {
             width: 150px;
             height: 150px;
@@ -676,24 +701,24 @@
             margin-bottom: 1rem;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
         }
-        
+
         .md-image h3 {
             color: var(--text-main);
             margin-bottom: 0.5rem;
         }
-        
+
         .md-image p {
             color: var(--text-muted);
             font-size: 0.9rem;
         }
-        
+
         /* Services Grid */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 1.5rem;
         }
-        
+
         .service-card {
             background-color: var(--bg-alt);
             border-radius: 12px;
@@ -702,13 +727,13 @@
             transition: transform 0.3s ease;
             border: 1px solid var(--gold);
         }
-        
+
         .service-card:hover {
             transform: translateY(-10px);
             border-color: var(--gold);
             box-shadow: 0 15px 30px rgba(201, 162, 77, 0.2);
         }
-        
+
         .service-icon {
             width: 60px;
             height: 60px;
@@ -720,26 +745,26 @@
             margin-bottom: 1rem;
             border: 1px solid var(--gold);
         }
-        
+
         .service-icon i {
             font-size: 1.5rem;
             color: var(--gold);
         }
-        
+
         .service-card h3 {
             color: var(--text-main);
         }
-        
+
         .service-card p {
             color: var(--text-muted);
             font-size: 0.9rem;
         }
-        
+
         /* Video Section */
         .video-section {
             background-color: var(--bg-main);
         }
-        
+
         .video-wrapper {
             max-width: 100%;
             margin: 0 auto;
@@ -749,13 +774,13 @@
             background-color: #000;
             border: 1px solid var(--gold);
         }
-        
+
         .video-container {
             position: relative;
             width: 100%;
             background-color: #000;
         }
-        
+
         .video-container video {
             width: 100%;
             height: auto;
@@ -763,7 +788,7 @@
             object-fit: contain;
             max-height: 70vh;
         }
-        
+
         /* Testimonials Slider */
         .testimonial-slider {
             max-width: 800px;
@@ -771,17 +796,17 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .testimonial-track {
             display: flex;
             transition: transform 0.5s ease;
         }
-        
+
         .testimonial-slide {
             min-width: 100%;
             padding: 0 0.5rem;
         }
-        
+
         .testimonial-content {
             background-color: var(--bg-alt);
             border-radius: 16px;
@@ -789,14 +814,14 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
             border: 1px solid var(--gold);
         }
-        
+
         .quote-icon {
             font-size: 1.8rem;
             color: var(--gold);
             margin-bottom: 1rem;
             opacity: 0.5;
         }
-        
+
         .testimonial-text {
             font-size: 0.95rem;
             font-style: italic;
@@ -804,25 +829,25 @@
             margin-bottom: 1.2rem;
             line-height: 1.6;
         }
-        
+
         .testimonial-author {
             font-weight: 600;
             color: var(--text-main);
         }
-        
+
         .testimonial-role {
             color: var(--gold);
             font-size: 0.8rem;
             margin-top: 0.2rem;
         }
-        
+
         .slider-dots {
             display: flex;
             justify-content: center;
             gap: 8px;
             margin-top: 1.5rem;
         }
-        
+
         .dot {
             width: 8px;
             height: 8px;
@@ -831,17 +856,17 @@
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
-        
+
         .dot.active {
             background-color: var(--gold);
         }
-        
+
         /* FAQ Section */
         .faq-container {
             max-width: 700px;
             margin: 0 auto;
         }
-        
+
         .faq-item {
             margin-bottom: 1rem;
             border-radius: 10px;
@@ -850,7 +875,7 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
             border: 1px solid var(--gold);
         }
-        
+
         .faq-question {
             padding: 1rem 1.2rem;
             display: flex;
@@ -861,13 +886,13 @@
             font-size: 0.9rem;
             color: var(--text-main);
         }
-        
+
         .faq-icon {
             color: var(--gold);
             transition: transform 0.3s ease;
             font-size: 1rem;
         }
-        
+
         .faq-answer {
             padding: 0 1.2rem;
             max-height: 0;
@@ -876,27 +901,27 @@
             color: var(--text-muted);
             font-size: 0.85rem;
         }
-        
+
         .faq-item.active .faq-answer {
             padding: 0 1.2rem 1rem 1.2rem;
             max-height: 500px;
         }
-        
+
         .faq-item.active .faq-icon {
             transform: rotate(45deg);
         }
-        
+
         /* Contact Section */
         .contact-section {
             background-color: var(--bg-alt);
         }
-        
+
         .contact-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
         }
-        
+
         .contact-info {
             background-color: var(--bg-main);
             border-radius: 16px;
@@ -904,13 +929,13 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
             border: 1px solid var(--gold);
         }
-        
+
         .contact-item {
             display: flex;
             align-items: flex-start;
             margin-bottom: 1.5rem;
         }
-        
+
         .contact-icon {
             width: 40px;
             height: 40px;
@@ -923,51 +948,51 @@
             flex-shrink: 0;
             border: 1px solid var(--gold);
         }
-        
+
         .contact-icon i {
             color: var(--gold);
             font-size: 1rem;
         }
-        
+
         .contact-details h4 {
             font-size: 1rem;
             margin-bottom: 0.3rem;
             color: var(--text-main);
         }
-        
+
         .contact-details p {
             color: var(--text-muted);
             font-size: 0.85rem;
             line-height: 1.5;
         }
-        
+
         .contact-details a {
             color: var(--text-muted);
             text-decoration: none;
             transition: color 0.3s ease;
         }
-        
+
         .contact-details a:hover {
             color: var(--gold);
         }
-        
+
         .timing-note {
             color: var(--gold) !important;
             font-size: 0.85rem;
         }
-        
+
         .holiday-note {
             color: #ff6b6b !important;
             font-size: 0.85rem;
         }
-        
+
         .social-contact {
             display: flex;
             gap: 0.8rem;
             margin-top: 1.5rem;
             flex-wrap: wrap;
         }
-        
+
         .social-contact a {
             display: flex;
             align-items: center;
@@ -981,13 +1006,13 @@
             transition: all 0.3s ease;
             border: 1px solid var(--gold);
         }
-        
+
         .social-contact a:hover {
             background-color: var(--gold);
             color: #0A0A0A;
             transform: translateY(-3px);
         }
-        
+
         .map-container {
             height: 300px;
             border-radius: 16px;
@@ -995,14 +1020,14 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
             border: 1px solid var(--gold);
         }
-        
+
         .map-container iframe {
             width: 100%;
             height: 100%;
             border: none;
             filter: grayscale(50%) invert(90%);
         }
-        
+
         /* CTA Section */
         .cta-section {
             text-align: center;
@@ -1010,26 +1035,26 @@
             border-top: 1px solid var(--gold);
             border-bottom: 1px solid var(--gold);
         }
-        
+
         .cta-content {
             max-width: 600px;
             margin: 0 auto;
         }
-        
+
         .cta-content h2 {
             color: var(--text-main);
         }
-        
+
         .cta-content p {
             color: var(--text-muted);
             font-size: 0.95rem;
             margin-bottom: 2rem;
         }
-        
+
         .cta-buttons.center {
             justify-content: center;
         }
-        
+
         /* Footer */
         footer {
             background-color: var(--bg-alt);
@@ -1037,51 +1062,51 @@
             padding: 3rem 0 1.5rem;
             border-top: 1px solid var(--gold);
         }
-        
+
         .footer-content {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 2rem;
             margin-bottom: 2rem;
         }
-        
+
         .footer-column h3 {
             font-size: 1.1rem;
             margin-bottom: 1.2rem;
             color: var(--gold);
         }
-        
+
         .footer-links {
             list-style: none;
         }
-        
+
         .footer-links li {
             margin-bottom: 0.6rem;
         }
-        
+
         .footer-links a {
             color: var(--text-muted);
             text-decoration: none;
             transition: color 0.3s ease;
             font-size: 0.85rem;
         }
-        
+
         .footer-links a:hover {
             color: var(--gold);
         }
-        
+
         .footer-links i {
             margin-right: 6px;
             width: 16px;
             color: var(--gold);
         }
-        
+
         .footer-logo {
             display: flex;
             align-items: center;
             margin-bottom: 1rem;
         }
-        
+
         .footer-logo .logo-icon {
             width: 40px;
             height: 40px;
@@ -1093,26 +1118,26 @@
             margin-right: 8px;
             flex-shrink: 0;
         }
-        
+
         .footer-logo .logo-icon i {
             color: #0A0A0A;
             font-size: 1.2rem;
         }
-        
+
         .footer-logo-text {
             font-family: 'Playfair Display', serif;
             font-size: 1.1rem;
             font-weight: 700;
             color: var(--text-main);
         }
-        
+
         .footer-logo-subtext {
             font-size: 0.5rem;
             color: var(--gold);
             letter-spacing: 0.5px;
             margin-top: -3px;
         }
-        
+
         .footer-bottom {
             padding-top: 1.5rem;
             border-top: 1px solid var(--gold);
@@ -1120,7 +1145,7 @@
             color: var(--text-muted);
             font-size: 0.75rem;
         }
-        
+
         /* WhatsApp Float Button */
         .whatsapp-float {
             position: fixed;
@@ -1140,191 +1165,195 @@
             transition: all 0.3s ease;
             text-decoration: none;
         }
-        
+
         .whatsapp-float:hover {
             transform: translateY(-5px) scale(1.1);
             box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
         }
-        
+
         /* Animation Classes */
         .fade-up {
             opacity: 0;
             transform: translateY(30px);
             transition: all 0.8s ease;
         }
-        
+
         .fade-up.visible {
             opacity: 1;
             transform: translateY(0);
         }
-        
+
         /* Mobile Responsive */
         @media (max-width: 992px) {
             .about-content {
                 grid-template-columns: 1fr;
                 gap: 2rem;
             }
-            
+
             .about-stats {
                 grid-template-columns: repeat(3, 1fr);
             }
-            
+
             .nav-links {
                 gap: 1rem;
             }
-            
+
             .hero-badges {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
-        
+
         @media (max-width: 768px) {
             .desktop-nav {
                 display: none;
             }
-            
+
             .mobile-menu-btn {
                 display: block;
             }
-            
+
             section {
                 padding: 3rem 0;
             }
-            
+
             .hero {
                 padding-top: 90px;
             }
-            
+
             .cta-buttons {
                 flex-direction: column;
                 align-items: stretch;
             }
-            
+
             .btn {
                 width: 100%;
             }
-            
+
             .about-stats {
                 grid-template-columns: 1fr;
                 gap: 1rem;
             }
-            
+
             .about-badges {
                 grid-template-columns: 1fr 1fr;
             }
-            
+
             .trust-badges {
                 flex-direction: column;
             }
-            
+
             .trust-badge {
                 width: 100%;
             }
-            
+
             .footer-content {
                 grid-template-columns: 1fr;
                 text-align: center;
             }
-            
+
             .footer-logo {
                 justify-content: center;
             }
-            
+
             .social-contact {
                 justify-content: center;
             }
-            
+
             .contact-grid {
                 grid-template-columns: 1fr;
             }
-            
+
             .map-container {
                 height: 250px;
             }
-            
+
             .phone-numbers {
                 flex-direction: column;
                 gap: 0.8rem;
             }
-            
+
             .hero-badges {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
-        
+
         @media (max-width: 480px) {
             .logo-text {
                 font-size: 0.95rem;
             }
-            
+
             .logo-subtext {
                 font-size: 0.45rem;
             }
-            
+
             h1 {
                 font-size: 1.8rem;
             }
-            
+
             .hero-subtitle {
                 font-size: 0.9rem;
             }
-            
+
             .hero-badges {
                 grid-template-columns: 1fr;
             }
-            
+
             .about-badges {
                 grid-template-columns: 1fr;
             }
-            
+
             .service-card {
                 padding: 1.5rem;
             }
-            
+
             .testimonial-content {
                 padding: 1.2rem;
             }
-            
+
             .faq-question {
                 padding: 1rem;
                 font-size: 0.85rem;
             }
-            
+
             .contact-info {
                 padding: 1.5rem 1rem;
             }
-            
+
             .whatsapp-float {
                 width: 50px;
                 height: 50px;
                 font-size: 1.5rem;
             }
-            
+
             .phone-item {
                 width: 100%;
             }
-            
+
             .phone-item a {
                 font-size: 1rem;
             }
         }
     </style>
 </head>
+
 <body>
     <!-- Header -->
     <header>
         <div class="container">
             <div class="header-content">
                 <a href="#home" class="logo">
-                    <div class="logo-image" style="width: 45px; height: 45px; display: flex; align-items: center; justify-content: center;">
-                        <img src="logo.png" alt="Golden Key Builders & Developers Logo" style="max-width: 45px; max-height: 45px; width: auto; height: auto; object-fit: contain;" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-key\' style=\'color: var(--gold); font-size: 30px;\'></i>';">
+                    <div class="logo-image"
+                        style="width: 45px; height: 45px; display: flex; align-items: center; justify-content: center;">
+                        <img src="logo.png" alt="Golden Key Builders & Developers Logo"
+                            style="max-width: 45px; max-height: 45px; width: auto; height: auto; object-fit: contain;"
+                            onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-key\' style=\'color: var(--gold); font-size: 30px;\'></i>';">
                     </div>
                     <div>
                         <div class="logo-text">GOLDEN KEY</div>
                         <div class="logo-subtext">BUILDERS & DEVELOPERS</div>
                     </div>
                 </a>
-                
+
                 <nav class="desktop-nav">
                     <ul class="nav-links">
                         <li><a href="#home">Home</a></li>
@@ -1335,13 +1364,13 @@
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
-                
+
                 <button class="mobile-menu-btn" id="mobileMenuBtn">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
         </div>
-        
+
         <!-- Mobile Menu -->
         <div class="mobile-menu" id="mobileMenu">
             <ul class="mobile-nav-links">
@@ -1351,7 +1380,8 @@
                 <li><a href="#video">Our Vision</a></li>
                 <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="tel:+919448330323" class="btn btn-primary" style="margin-top: 0.5rem; width: 100%;">Call Now</a></li>
+                <li><a href="tel:+919448330323" class="btn btn-primary" style="margin-top: 0.5rem; width: 100%;">Call
+                        Now</a></li>
             </ul>
         </div>
     </header>
@@ -1360,7 +1390,7 @@
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
-                
+
                 <h1 class="hero-headline">
                     <div class="line">
                         <span id="word1">GOLDEN KEY</span>
@@ -1369,10 +1399,12 @@
                         <span id="word2">BUILDERS & DEVELOPERS</span>
                     </div>
                 </h1>
-                
-                
-                <p class="hero-subtitle" id="heroSubtitle">Golden Key Builders & Developers - A trusted name in Bangalore real estate with BMRDA approved projects, complete transparency, and long-term value creation.</p>
-                
+
+
+                <p class="hero-subtitle" id="heroSubtitle">Golden Key Builders & Developers - A trusted name in
+                    Bangalore real estate with BMRDA approved projects, complete transparency, and long-term value
+                    creation.</p>
+
                 <!-- Hero Badges to Fill Space -->
                 <div class="hero-badges" id="heroBadges">
                     <div class="hero-badge-item">
@@ -1396,17 +1428,17 @@
                         <p>No Broker</p>
                     </div>
                 </div>
-                
+
                 <div class="cta-buttons" id="heroButtons">
                     <a href="tel:+919448330323" class="btn btn-primary">
                         <i class="fas fa-phone btn-icon"></i> Call +91 94483 30323
                     </a>
-                    <a href="https://wa.me/919448330323?text=Hi%20Golden%20Key%20Builders%20%26%20Developers%2C%20I'm%20interested%20in%20your%20BMRDA%20approved%20projects.%20Please%20share%20more%20details." 
-                       target="_blank" class="btn btn-secondary">
+                    <a href="https://wa.me/919448330323?text=Hi%20Golden%20Key%20Builders%20%26%20Developers%2C%20I'm%20interested%20in%20your%20BMRDA%20approved%20projects.%20Please%20share%20more%20details."
+                        target="_blank" class="btn btn-secondary">
                         <i class="fab fa-whatsapp btn-icon"></i> WhatsApp Enquiry
                     </a>
                 </div>
-                
+
                 <div class="trust-badges" id="trustBadges">
                     <div class="trust-badge">
                         <div class="trust-icon">
@@ -1430,19 +1462,24 @@
             </div>
         </div>
     </section>
-    
+
     <!-- About Section -->
     <section id="about" class="section-alt">
         <div class="container">
             <div class="about-content">
                 <div class="about-text fade-up">
                     <h2 class="section-title">About Golden Key</h2>
-                    <p>Golden Key Builders & Developers is a premier real estate development company based in Bangalore, specializing in BMRDA approved residential and commercial projects. Founded with a vision to provide genuine value and complete transparency in real estate investments.</p>
-                    
+                    <p>Golden Key Builders & Developers is a premier real estate development company based in Bangalore,
+                        specializing in BMRDA approved residential and commercial projects. Founded with a vision to
+                        provide genuine value and complete transparency in real estate investments.</p>
+
                     <div class="about-highlight">
-                        <p><strong>BMRDA APPROVED A KHATA</strong> – ಸೈಟ್ ಖರೀದಿಸೊ ಸುವರ್ಣ ಅವಕಾಶ ನಿಮ್ಮ ದಾಗಿಸಿಕೊಳ್ಳಿ</p>
+                        <p><strong>BMRDA APPROVED A KHATA SITES, GBA APPROVED SITES, BDA APPROVED SITES</strong>
+                        <p> DC
+                            CONVERTIONS
+                            SITES AND FARM LANDS AVAILABLE.</p>
                     </div>
-                    
+
                     <div class="about-stats">
                         <div class="stat-item fade-up">
                             <div class="stat-number">15+</div>
@@ -1457,7 +1494,7 @@
                             <div class="stat-label">Client Satisfaction</div>
                         </div>
                     </div>
-                    
+
                     <!-- About Badges -->
                     <div class="about-badges">
                         <div class="about-badge">
@@ -1482,11 +1519,20 @@
                         </div>
                     </div>
                 </div>
-                
-                <div class="about-image fade-up" style="transition-delay: 0.3s;">
+
+                <div class="about-image fade-up"
+                    style="transition-delay: 0.3s; display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
                     <div class="md-image">
-                        <img src="me.png" alt="Ranjith KM - Managing Director" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-user-tie\' style=\'font-size: 5rem; margin-bottom: 1rem; color: var(--gold);\'></i><h3>Ranjith KM</h3><p>Managing Director</p>'">
+                        <img src="me.png" alt="Ranjith KM - Managing Director"
+                            onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-user-tie\' style=\'font-size: 5rem; margin-bottom: 1rem; color: var(--gold);\'></i><h3>Ranjith KM</h3><p>Managing Director</p>'">
                         <h3>Ranjith KM</h3>
+                        <p>Managing Director</p>
+                        <p style="font-size: 0.7rem; margin-top: 0.5rem;">ವ್ಯವಸ್ಥಾಪಕ ನಿರ್ದೇಶಕರು</p>
+                    </div>
+                    <div class="md-image">
+                        <img src="me2.jpeg" alt="Praveen RC - Managing Director"
+                            onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-user-tie\' style=\'font-size: 5rem; margin-bottom: 1rem; color: var(--gold);\'></i><h3>Praveen RC</h3><p>Managing Director</p>'">
+                        <h3>Praveen RC</h3>
                         <p>Managing Director</p>
                         <p style="font-size: 0.7rem; margin-top: 0.5rem;">ವ್ಯವಸ್ಥಾಪಕ ನಿರ್ದೇಶಕರು</p>
                     </div>
@@ -1494,59 +1540,65 @@
             </div>
         </div>
     </section>
-    
+
     <!-- Services Section -->
     <section id="services" class="section-gold">
         <div class="container">
             <div class="section-header fade-up">
                 <h2 class="section-title">Our Services</h2>
-                <p class="section-subtitle">Comprehensive real estate development solutions with complete legal transparency</p>
+                <p class="section-subtitle">Comprehensive real estate development solutions with complete legal
+                    transparency</p>
             </div>
-            
+
             <div class="services-grid">
                 <div class="service-card fade-up">
                     <div class="service-icon">
                         <i class="fas fa-home"></i>
                     </div>
                     <h3>Residential Development</h3>
-                    <p>BMRDA approved residential plots, villas, and apartments with clear documentation and legal titles.</p>
+                    <p>BMRDA approved residential plots, villas, and apartments with clear documentation and legal
+                        titles.</p>
                 </div>
-                
+
                 <div class="service-card fade-up" style="transition-delay: 0.1s;">
                     <div class="service-icon">
                         <i class="fas fa-building"></i>
                     </div>
                     <h3>Commercial Projects</h3>
-                    <p>Strategic commercial developments in prime locations with high ROI potential and proper approvals.</p>
+                    <p>Strategic commercial developments in prime locations with high ROI potential and proper
+                        approvals.</p>
                 </div>
-                
+
                 <div class="service-card fade-up" style="transition-delay: 0.2s;">
                     <div class="service-icon">
                         <i class="fas fa-file-contract"></i>
                     </div>
                     <h3>Legal Documentation</h3>
-                    <p>Complete legal assistance including Khata transfer, sale deed registration, and all necessary approvals.</p>
+                    <p>Complete legal assistance including Khata transfer, sale deed registration, and all necessary
+                        approvals.</p>
                 </div>
-                
+
                 <div class="service-card fade-up" style="transition-delay: 0.3s;">
                     <div class="service-icon">
                         <i class="fas fa-handshake"></i>
                     </div>
                     <h3>Property Consultation</h3>
-                    <p>Expert guidance on property investment, market analysis, and long-term value appreciation strategies.</p>
+                    <p>Expert guidance on property investment, market analysis, and long-term value appreciation
+                        strategies.</p>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <!-- Video Section -->
     <section id="video" class="video-section">
         <div class="container">
             <div class="section-header fade-up">
                 <h2 class="section-title">Our Vision & Projects</h2>
-                <p class="section-subtitle">Discover how we transform visions into reality with quality and transparency</p>
+                <p class="section-subtitle">Discover how we transform visions into reality with quality and transparency
+                </p>
             </div>
-            
+
             <div class="video-wrapper fade-up">
                 <div class="video-container">
                     <video id="mainVideo" controls autoplay muted loop playsinline>
@@ -1557,7 +1609,7 @@
             </div>
         </div>
     </section>
-    
+
     <!-- Testimonials Section -->
     <section id="testimonials" class="section-alt">
         <div class="container">
@@ -1565,7 +1617,7 @@
                 <h2 class="section-title">Client Testimonials</h2>
                 <p class="section-subtitle">What our clients say about their experience with Golden Key</p>
             </div>
-            
+
             <div class="testimonial-slider fade-up">
                 <div class="testimonial-track" id="testimonialTrack">
                     <!-- Slide 1 -->
@@ -1574,37 +1626,43 @@
                             <div class="quote-icon">
                                 <i class="fas fa-quote-right"></i>
                             </div>
-                            <p class="testimonial-text">"Golden Key Builders provided complete transparency throughout the process. Their BMRDA approval gave me confidence, and the documentation was handled professionally. Highly recommended for genuine property investment."</p>
+                            <p class="testimonial-text">"Golden Key Builders provided complete transparency throughout
+                                the process. Their BMRDA approval gave me confidence, and the documentation was handled
+                                professionally. Highly recommended for genuine property investment."</p>
                             <div class="testimonial-author">Rajesh Kumar</div>
                             <div class="testimonial-role">Residential Plot Buyer</div>
                         </div>
                     </div>
-                    
+
                     <!-- Slide 2 -->
                     <div class="testimonial-slide">
                         <div class="testimonial-content">
                             <div class="quote-icon">
                                 <i class="fas fa-quote-right"></i>
                             </div>
-                            <p class="testimonial-text">"As an NRI investor, I needed a trustworthy developer. Golden Key exceeded expectations with their clear communication, proper documentation, and regular updates. My investment is secure with them."</p>
+                            <p class="testimonial-text">"As an NRI investor, I needed a trustworthy developer. Golden
+                                Key exceeded expectations with their clear communication, proper documentation, and
+                                regular updates. My investment is secure with them."</p>
                             <div class="testimonial-author">Priya Nair</div>
                             <div class="testimonial-role">NRI Investor</div>
                         </div>
                     </div>
-                    
+
                     <!-- Slide 3 -->
                     <div class="testimonial-slide">
                         <div class="testimonial-content">
                             <div class="quote-icon">
                                 <i class="fas fa-quote-right"></i>
                             </div>
-                            <p class="testimonial-text">"The legal clarity provided by Golden Key is unmatched. Every document was explained in detail, and the BMRDA approval process was smooth. They truly live up to their name as the 'Golden Key' to secure real estate."</p>
+                            <p class="testimonial-text">"The legal clarity provided by Golden Key is unmatched. Every
+                                document was explained in detail, and the BMRDA approval process was smooth. They truly
+                                live up to their name as the 'Golden Key' to secure real estate."</p>
                             <div class="testimonial-author">Amit Sharma</div>
                             <div class="testimonial-role">Commercial Property Investor</div>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="slider-dots" id="sliderDots">
                     <div class="dot active" data-slide="0"></div>
                     <div class="dot" data-slide="1"></div>
@@ -1613,7 +1671,7 @@
             </div>
         </div>
     </section>
-    
+
     <!-- FAQ Section -->
     <section class="section-gold">
         <div class="container">
@@ -1621,7 +1679,7 @@
                 <h2 class="section-title">Frequently Asked Questions</h2>
                 <p class="section-subtitle">Common questions about BMRDA approved properties and our services</p>
             </div>
-            
+
             <div class="faq-container">
                 <!-- FAQ Item 1 -->
                 <div class="faq-item fade-up">
@@ -1630,10 +1688,12 @@
                         <i class="fas fa-plus faq-icon"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>BMRDA (Bangalore Metropolitan Region Development Authority) approval means the property is legally sanctioned for development, has proper infrastructure planning, and ensures future appreciation. It provides legal security and makes the property bankable for loans.</p>
+                        <p>BMRDA (Bangalore Metropolitan Region Development Authority) approval means the property is
+                            legally sanctioned for development, has proper infrastructure planning, and ensures future
+                            appreciation. It provides legal security and makes the property bankable for loans.</p>
                     </div>
                 </div>
-                
+
                 <!-- FAQ Item 2 -->
                 <div class="faq-item fade-up" style="transition-delay: 0.1s;">
                     <div class="faq-question">
@@ -1641,10 +1701,12 @@
                         <i class="fas fa-plus faq-icon"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>A Khata is a document that proves you are the legal owner of a property and have paid all taxes. It's essential for obtaining bank loans, building permits, and selling the property in the future. All our properties come with clear A Khata documentation.</p>
+                        <p>A Khata is a document that proves you are the legal owner of a property and have paid all
+                            taxes. It's essential for obtaining bank loans, building permits, and selling the property
+                            in the future. All our properties come with clear A Khata documentation.</p>
                     </div>
                 </div>
-                
+
                 <!-- FAQ Item 3 -->
                 <div class="faq-item fade-up" style="transition-delay: 0.2s;">
                     <div class="faq-question">
@@ -1652,10 +1714,12 @@
                         <i class="fas fa-plus faq-icon"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Yes, we have tie-ups with major banks and financial institutions. Our BMRDA approved A Khata properties are easily eligible for home loans. We assist throughout the loan application and approval process.</p>
+                        <p>Yes, we have tie-ups with major banks and financial institutions. Our BMRDA approved A Khata
+                            properties are easily eligible for home loans. We assist throughout the loan application and
+                            approval process.</p>
                     </div>
                 </div>
-                
+
                 <!-- FAQ Item 4 -->
                 <div class="faq-item fade-up" style="transition-delay: 0.3s;">
                     <div class="faq-question">
@@ -1663,13 +1727,15 @@
                         <i class="fas fa-plus faq-icon"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Absolutely. We have extensive experience working with NRI clients. We handle all legal formalities, provide regular updates, and ensure smooth transactions with complete transparency. Our properties are FEMA compliant for NRI investments.</p>
+                        <p>Absolutely. We have extensive experience working with NRI clients. We handle all legal
+                            formalities, provide regular updates, and ensure smooth transactions with complete
+                            transparency. Our properties are FEMA compliant for NRI investments.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
         <div class="container">
@@ -1677,7 +1743,7 @@
                 <h2 class="section-title">Contact Us</h2>
                 <p class="section-subtitle">Get in touch with Golden Key Builders & Developers</p>
             </div>
-            
+
             <div class="contact-grid">
                 <div class="contact-info fade-up">
                     <div class="contact-item">
@@ -1692,7 +1758,7 @@
                             </p>
                         </div>
                     </div>
-                    
+
                     <div class="contact-item">
                         <div class="contact-icon">
                             <i class="fas fa-phone"></i>
@@ -1700,86 +1766,96 @@
                         <div class="contact-details">
                             <h4>Phone Numbers</h4>
                             <p><strong>8971969956</strong> | <strong>9448330323</strong></p>
-                            <p class="timing-note">Sun-Sat: 9:30 AM - 6:30 PM</p>
+                            <p class="timing-note">Mon, Wed-Sat: 9:30 AM - 6:30 PM</p>
                             <p class="holiday-note">Tuesday: Holiday</p>
                         </div>
                     </div>
-                    
+
                     <div class="contact-item">
                         <div class="contact-icon">
                             <i class="fas fa-envelope"></i>
                         </div>
                         <div class="contact-details">
                             <h4>Email Address</h4>
-                            <p><a href="mailto:goldenkeybuildersanddeveloper@gmail.com">goldenkeybuildersanddeveloper@gmail.com</a></p>
+                            <p><a
+                                    href="mailto:goldenkeybuildersanddeveloper@gmail.com">goldenkeybuildersanddeveloper@gmail.com</a>
+                            </p>
                         </div>
                     </div>
-                    
+
                     <div class="contact-item">
                         <div class="contact-icon">
                             <i class="fas fa-globe"></i>
                         </div>
                         <div class="contact-details">
                             <h4>Website</h4>
-                            <p><a href="https://goldenkeybuildersanddeveloper.com" target="_blank">goldenkeybuildersanddeveloper.com</a></p>
+                            <p><a href="https://goldenkeybuildersanddeveloper.com"
+                                    target="_blank">goldenkeybuildersanddeveloper.com</a></p>
                         </div>
                     </div>
-                    
+
                     <div class="social-contact">
-                        <a href="https://www.facebook.com/share/1HUBtkmxQ6/" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/golden_key_groups?utm_source=qr&igsh=MWFuMTdlc2hrZmE3MQ%3D%3D" title="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://wa.me/919448330323" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.facebook.com/share/1HUBtkmxQ6/" title="Facebook"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/golden_key_groups?utm_source=qr&igsh=MWFuMTdlc2hrZmE3MQ%3D%3D"
+                            title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/919448330323" target="_blank" title="WhatsApp"><i
+                                class="fab fa-whatsapp"></i></a>
                         <a href="tel:+919448330323" title="Call"><i class="fas fa-phone"></i></a>
                     </div>
                 </div>
-                
+
                 <div class="map-container fade-up" style="transition-delay: 0.2s;">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.175035154022!2d77.51285951538384!3d12.884734990904366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3f7e4c5f7b7f%3A0x1c1b3b3b3b3b3b3b!2sGavipura%20Extension%2C%20Bengaluru%2C%20Karnataka%20560056!5e0!3m2!1sen!2sin!4v1638954367890!5m2!1sen!2sin" 
-                        allowfullscreen="" 
-                        loading="lazy">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.175035154022!2d77.51285951538384!3d12.884734990904366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3f7e4c5f7b7f%3A0x1c1b3b3b3b3b3b3b!2sGavipura%20Extension%2C%20Bengaluru%2C%20Karnataka%20560056!5e0!3m2!1sen!2sin!4v1638954367890!5m2!1sen!2sin"
+                        allowfullscreen="" loading="lazy">
                     </iframe>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
             <div class="cta-content fade-up">
                 <h2>Ready to Invest with Confidence?</h2>
-                <p>Contact Golden Key Builders & Developers today for genuine BMRDA approved A Khata properties with complete legal transparency.</p>
+                <p>Contact Golden Key Builders & Developers today for genuine BMRDA approved A Khata properties with
+                    complete legal transparency.</p>
                 <div class="cta-buttons center">
                     <a href="tel:+919448330323" class="btn btn-primary">
                         <i class="fas fa-phone btn-icon"></i> Call +91 94483 30323
                     </a>
-                    <a href="https://wa.me/919448330323?text=Hi%20Golden%20Key%20Builders%20%26%20Developers%2C%20I'm%20interested%20in%20your%20BMRDA%20approved%20projects.%20Please%20share%20more%20details." 
-                       target="_blank" class="btn btn-secondary">
+                    <a href="https://wa.me/919448330323?text=Hi%20Golden%20Key%20Builders%20%26%20Developers%2C%20I'm%20interested%20in%20your%20BMRDA%20approved%20projects.%20Please%20share%20more%20details."
+                        target="_blank" class="btn btn-secondary">
                         <i class="fab fa-whatsapp btn-icon"></i> WhatsApp Enquiry
                     </a>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column fade-up">
                     <div class="footer-logo" style="display: flex; align-items: center;">
-                        <div style="width: 45px; height: 45px; margin-right: 10px; display: flex; align-items: center; justify-content: center;">
-                            <img src="logo.png" alt="Golden Key Builders & Developers Logo" style="max-width: 45px; max-height: 45px; width: auto; height: auto; object-fit: contain; filter: brightness(0) invert(1);" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-key\' style=\'color: var(--gold); font-size: 30px;\'></i>';">
+                        <div
+                            style="width: 45px; height: 45px; margin-right: 10px; display: flex; align-items: center; justify-content: center;">
+                            <img src="logo.png" alt="Golden Key Builders & Developers Logo"
+                                style="max-width: 45px; max-height: 45px; width: auto; height: auto; object-fit: contain; filter: brightness(0) invert(1);"
+                                onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-key\' style=\'color: var(--gold); font-size: 30px;\'></i>';">
                         </div>
                         <div>
                             <div class="footer-logo-text">GOLDEN KEY</div>
                             <div class="footer-logo-subtext">BUILDERS & DEVELOPERS</div>
                         </div>
                     </div>
-                    <p style="color: var(--text-muted); font-size: 0.85rem;">BMRDA Approved A Khata Real Estate Developer in Bangalore. Direct owner properties since 2008.</p>
+                    <p style="color: var(--text-muted); font-size: 0.85rem;">BMRDA Approved A Khata Real Estate
+                        Developer in Bangalore. Direct owner properties since 2008.</p>
                 </div>
-                
+
                 <div class="footer-column fade-up" style="transition-delay: 0.1s;">
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
@@ -1791,41 +1867,43 @@
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-column fade-up" style="transition-delay: 0.2s;">
                     <h3>Contact Info</h3>
                     <ul class="footer-links">
                         <li><a href="tel:8971969956"><i class="fas fa-phone"></i> 8971969956</a></li>
                         <li><a href="tel:9448330323"><i class="fas fa-phone"></i> 9448330323</a></li>
-                        <li><a href="mailto:goldenkeybuildersanddeveloper@gmail.com"><i class="fas fa-envelope"></i> Email Us</a></li>
-                        <li><i class="fas fa-map-marker-alt"></i>Amma Ashram Main Road, Bengaluru</li>
-                        <li><i class="fas fa-clock"></i> Sun-Sat: 9:30-6:30</li>
-                        <li><i class="fas fa-clock"></i> Tuesday: Closed</li>
+                        <li><a href="mailto:goldenkeybuildersanddeveloper@gmail.com"><i class="fas fa-envelope"></i>
+                                Email Us</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> Gavipura, Bengaluru</li>
+                        <li><i class="fas fa-clock"></i> Mon, Wed-Sat: 9:30-6:30</li>
+                        <li><i class="fas fa-clock"></i> Tue: Closed</li>
                     </ul>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
                 <p>&copy; 2023 Golden Key Builders & Developers. All rights reserved. | BMRDA Approved A Khata</p>
-                <p style="margin-top: 0.3rem; font-size: 0.65rem;">Proprietor: Ranjith KM | ವ್ಯವಸ್ಥಾಪಕ ನಿರ್ದೇಶಕರುು</p>
+                <p style="margin-top: 0.3rem; font-size: 0.65rem;">Proprietor: Ranjith KM | Direct Owner | ನೇರ ಮಾಲೀಕರು
+                </p>
             </div>
         </div>
     </footer>
-    
+
     <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/919448330323?text=Hi%20Golden%20Key%20Builders%20%26%20Developers%2C%20I'm%20interested%20in%20your%20BMRDA%20approved%20A%20Khata%20properties.%20Please%20share%20more%20details." 
-       target="_blank" class="whatsapp-float">
+    <a href="https://wa.me/919448330323?text=Hi%20Golden%20Key%20Builders%20%26%20Developers%2C%20I'm%20interested%20in%20your%20BMRDA%20approved%20A%20Khata%20properties.%20Please%20share%20more%20details."
+        target="_blank" class="whatsapp-float">
         <i class="fab fa-whatsapp"></i>
     </a>
-    
+
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Mobile Menu Toggle
             const mobileMenuBtn = document.getElementById('mobileMenuBtn');
             const mobileMenu = document.getElementById('mobileMenu');
-            
+
             if (mobileMenuBtn && mobileMenu) {
-                mobileMenuBtn.addEventListener('click', function(e) {
+                mobileMenuBtn.addEventListener('click', function (e) {
                     e.stopPropagation();
                     mobileMenu.classList.toggle('active');
                     const icon = mobileMenuBtn.querySelector('i');
@@ -1837,7 +1915,7 @@
                         icon.classList.add('fa-bars');
                     }
                 });
-                
+
                 // Close mobile menu when clicking a link
                 document.querySelectorAll('.mobile-nav-links a').forEach(link => {
                     link.addEventListener('click', () => {
@@ -1847,31 +1925,31 @@
                     });
                 });
             }
-            
+
             // ANIMATION 1: Fade + Slide Up (Scroll)
             const fadeElements = document.querySelectorAll('.fade-up');
-            
+
             const checkVisibility = () => {
                 fadeElements.forEach(element => {
                     const rect = element.getBoundingClientRect();
                     const windowHeight = window.innerHeight;
-                    
+
                     if (rect.top < windowHeight - 100) {
                         element.classList.add('visible');
                     }
                 });
             };
-            
+
             // Initial check
             checkVisibility();
             window.addEventListener('scroll', checkVisibility);
-            
+
             // ANIMATION 2: Hero Headline Text Reveal
             const heroWords = [
                 document.getElementById('word1'),
                 document.getElementById('word2')
             ];
-            
+
             heroWords.forEach((word, index) => {
                 if (word) {
                     setTimeout(() => {
@@ -1879,7 +1957,7 @@
                     }, index * 300);
                 }
             });
-            
+
             // Hero badge, subtitle, buttons, trust badges
             const bmrdaBadge = document.getElementById('bmrdaBadge');
             const phoneNumbers = document.getElementById('phoneNumbers');
@@ -1887,42 +1965,42 @@
             const heroBadges = document.getElementById('heroBadges');
             const heroButtons = document.getElementById('heroButtons');
             const trustBadges = document.getElementById('trustBadges');
-            
+
             setTimeout(() => {
                 if (bmrdaBadge) bmrdaBadge.classList.add('visible');
             }, 100);
-            
+
             setTimeout(() => {
                 if (phoneNumbers) phoneNumbers.classList.add('visible');
             }, 300);
-            
+
             setTimeout(() => {
                 if (heroSubtitle) heroSubtitle.classList.add('visible');
             }, 500);
-            
+
             setTimeout(() => {
                 if (heroBadges) heroBadges.classList.add('visible');
             }, 700);
-            
+
             setTimeout(() => {
                 if (heroButtons) heroButtons.classList.add('visible');
             }, 900);
-            
+
             setTimeout(() => {
                 if (trustBadges) trustBadges.classList.add('visible');
             }, 1100);
-            
+
             // ANIMATION 3: Testimonial Slider
             const testimonialTrack = document.getElementById('testimonialTrack');
             const dots = document.querySelectorAll('.dot');
             let currentSlide = 0;
             const slideCount = document.querySelectorAll('.testimonial-slide').length;
-            
+
             if (testimonialTrack && slideCount > 0) {
                 function goToSlide(slideIndex) {
                     currentSlide = slideIndex;
                     testimonialTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
-                    
+
                     // Update dots
                     dots.forEach((dot, index) => {
                         if (index === currentSlide) {
@@ -1932,15 +2010,15 @@
                         }
                     });
                 }
-                
+
                 function nextSlide() {
                     currentSlide = (currentSlide + 1) % slideCount;
                     goToSlide(currentSlide);
                 }
-                
+
                 // Auto slide every 5 seconds
                 let slideInterval = setInterval(nextSlide, 5000);
-                
+
                 // Dot click events
                 dots.forEach((dot, index) => {
                     dot.addEventListener('click', () => {
@@ -1951,13 +2029,13 @@
                     });
                 });
             }
-            
+
             // FAQ Accordion
             const faqItems = document.querySelectorAll('.faq-item');
-            
+
             faqItems.forEach(item => {
                 const question = item.querySelector('.faq-question');
-                
+
                 question.addEventListener('click', () => {
                     // Close other items
                     faqItems.forEach(otherItem => {
@@ -1965,30 +2043,30 @@
                             otherItem.classList.remove('active');
                         }
                     });
-                    
+
                     // Toggle current item
                     item.classList.toggle('active');
                 });
             });
-            
+
             // Smooth scroll for anchor links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
+                anchor.addEventListener('click', function (e) {
                     e.preventDefault();
-                    
+
                     const targetId = this.getAttribute('href');
                     if (targetId === '#') return;
-                    
+
                     const targetElement = document.querySelector(targetId);
                     if (targetElement) {
                         const headerHeight = document.querySelector('header').offsetHeight;
                         const targetPosition = targetElement.offsetTop - headerHeight;
-                        
+
                         window.scrollTo({
                             top: targetPosition,
                             behavior: 'smooth'
                         });
-                        
+
                         // Close mobile menu if open
                         if (mobileMenu && mobileMenu.classList.contains('active')) {
                             mobileMenu.classList.remove('active');
@@ -1998,7 +2076,7 @@
                     }
                 });
             });
-            
+
             // Header scroll effect
             window.addEventListener('scroll', () => {
                 const header = document.querySelector('header');
@@ -2008,9 +2086,9 @@
                     header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.3)';
                 }
             });
-            
+
             // REMOVED VIDEO POPUP CODE COMPLETELY
-            
+
             // Handle main video - attempt to play with sound
             const mainVideo = document.getElementById('mainVideo');
             if (mainVideo) {
@@ -2021,14 +2099,14 @@
                     // If autoplay with sound fails, use muted autoplay (browsers allow this)
                     mainVideo.muted = true;
                     mainVideo.play();
-                    
+
                     // Add unmute button or let user click to unmute
-                    mainVideo.addEventListener('click', function() {
+                    mainVideo.addEventListener('click', function () {
                         this.muted = false;
                     });
                 });
             }
-            
+
             // Handle window resize for mobile menu
             window.addEventListener('resize', () => {
                 if (window.innerWidth > 768 && mobileMenu && mobileMenu.classList.contains('active')) {
@@ -2040,7 +2118,5 @@
         });
     </script>
 </body>
+
 </html>
-
-
-
